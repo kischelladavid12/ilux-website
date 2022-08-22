@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
-use PDO;
 
 class TurboSMMController extends Controller
 {
@@ -21,6 +22,8 @@ class TurboSMMController extends Controller
         ]);
     }
 
+
+
     public function balance()
     {
         return $this->connect($data = [
@@ -29,12 +32,14 @@ class TurboSMMController extends Controller
         ]);
     }
 
-    public function addOrder(Request $request)
+
+
+    public function addOrder(Request $request,)
     {
         $query = array();
 
         foreach ($request->all() as $key => $value) {
-            if ($key != '_token' && $key != 'submit') {
+            if ($key != '_token' && $key != 'submit' && $key != 'package_name' && $key != 'price') {
                 $query[$key] = $value;
             }
         }
@@ -44,8 +49,34 @@ class TurboSMMController extends Controller
             'action' => 'add'
         ), $query);
 
-        return $this->connect($post);
+        $response = $this->connect($post);
+
+        //Data insertion to local orders database
+        $orderCheck = $this->orderStatus($response->order);
+
+        $turbo_order_id = $response->order;
+        $turbo_service_id = $request->service;
+        $package_name = $request->package_name;
+        $price = $request->price;
+        $status = $orderCheck->status;
+
+
+        $isInsertSuccess = Order::insert([
+            'user_id' => Auth::user()->id,
+            'turbo_order_id' => $turbo_order_id,
+            'turbo_service_id' => $turbo_service_id,
+            'package_name' => $package_name,
+            'price' => $price,
+            'status' => $status
+        ]);
+
+        if ($isInsertSuccess) echo '<h1>Order Confirmed</h1>';
+        else echo '<h1>Order Failed</h1>';
+
+        return $response;
     }
+
+
 
     public function orderStatus($orderId)
     {
@@ -55,6 +86,8 @@ class TurboSMMController extends Controller
             'order' => $orderId
         ]);
     }
+
+
 
     private function connect($data)
     {
