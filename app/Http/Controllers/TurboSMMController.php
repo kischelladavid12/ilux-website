@@ -29,12 +29,22 @@ class TurboSMMController extends Controller
         ]);
     }
 
-    public function addOrder($orderData)
+    public function addOrder(Request $request)
     {
-        return $this->connect($data = [
+        $query = array();
+
+        foreach ($request->all() as $key => $value) {
+            if ($key != '_token' && $key != 'submit') {
+                $query[$key] = $value;
+            }
+        }
+
+        $post = array_merge(array(
             'key' => $this->api_key,
             'action' => 'add'
-        ]);
+        ), $query);
+
+        return $this->connect($post);
     }
 
     public function orderStatus($orderId)
@@ -51,8 +61,9 @@ class TurboSMMController extends Controller
         $client = new Client(['base_uri' => $this->api_url]);
         try {
             $url = $this->api_url . '?' . http_build_query($data);
-            $response = Http::post($url);
-            return json_decode($response, true);
+            echo $url;
+            //$response = Http::post($url);
+            //return json_decode($response, true);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             echo $e->getRequest()->getUri();
         }
