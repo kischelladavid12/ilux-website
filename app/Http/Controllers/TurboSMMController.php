@@ -61,9 +61,8 @@ class TurboSMMController extends Controller
         $client = new Client(['base_uri' => $this->api_url]);
         try {
             $url = $this->api_url . '?' . http_build_query($data);
-            echo $url;
-            //$response = Http::post($url);
-            //return json_decode($response, true);
+            $response = Http::post($url);
+            return json_decode($response, true);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             echo $e->getRequest()->getUri();
         }
