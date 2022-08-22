@@ -33,7 +33,7 @@ Route::middleware('auth:sanctum')->get('/service-list', function () {
 });
 
 Route::middleware('auth:sanctum')->get('/order', function () {
-    return view('order/order-form');
+    return view('order-view/order-form');
 });
 
-Route::middleware('auth:sanctum')->post('/order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
+Route::middleware('auth:sanctum')->post('order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
