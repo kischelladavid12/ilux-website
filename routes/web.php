@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth:sanctum')->get('/home', function () {
+    return view('welcome');
+});
+
+Route::middleware('auth:sanctum')->get('/dashboard', function () {
+    return view('home');
+});
+
+Route::middleware('auth:sanctum')->get('/service-list', function () {
+    return view('service-list');
+});
+
+Route::middleware('auth:sanctum')->get('/order', function () {
+    return view('order/order-form');
+});
+
+Route::middleware('auth:sanctum')->post('/order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
