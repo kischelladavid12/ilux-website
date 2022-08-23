@@ -6,9 +6,9 @@
         <form action="{{ url('/order/form-submit') }}" method="POST">
             @csrf
             <!-- Please include these hidden inputs and their respective values for every respective order form -->
-            <input type="hidden" id="custId" name="service" value="3100">
-            <input type="hidden" id="custId" name="package_name" value="FB Page - 1000 Likes and Followers">
-            <input type="hidden" id="custId" name="price" value="800">
+            <input type="hidden" id="service" name="service" value="3100">
+            <input type="hidden" id="package" name="package_name" value="FB Page - 1000 Likes and Followers">
+            <input type="hidden" id="price" name="price" value="800">
 
             <div class="row pt-2">
                 <h3 class="text-center"> FB Page - 1000 Likes and Followers </h2>
