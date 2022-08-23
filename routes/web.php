@@ -36,4 +36,14 @@ Route::middleware('auth:sanctum')->get('/order', function () {
     return view('order-view/order-form');
 });
 
+Route::get('/what-we-do', function () {
+    return view('what-we-do');
+});
+
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
+
+
 Route::middleware('auth:sanctum')->post('order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
