@@ -96,7 +96,7 @@
     <div id="form">
         <div class="container-register ">
 
-            <form class="form " id="createAccount">
+            <form class="form " id="createAccount" action="{{ route('/auth/register') }}">
                 <h1 class="form_title">Create Account</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
