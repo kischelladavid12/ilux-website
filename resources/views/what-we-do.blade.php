@@ -78,12 +78,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#">Home</a></li>
+                    <li id="whatwedo" class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact Us</a></li>
                 </ul>
                 <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
 
@@ -113,7 +113,7 @@
             <div class="container tm-container-gallery">
                 <div class="row">
                     <div class="text-center col-12">
-                        <h2 class="tm-text-primary tm-section-title mb-4">What We Do</h2>
+                        <h2 class="tm-text-primary tm-section-title mb-4">Grow your Reach!</h2>
                         <p class="mx-auto tm-section-desc">
                             All the social media promotion services that you need - in one place!
                         </p>
@@ -131,8 +131,6 @@
                                         to our clients’ online visibility across all social media networks. We currently
                                         provide services for the most important social media channels: Instagram,
                                         Facebook, Twitter, YouTube and Tiktok.</p>
-
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
@@ -152,7 +150,6 @@
                                         media websites or you are a big influencer who wants to get the competitive edge
                                         against your competitors, we have just the right services for you!
                                     </p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
                         </div>
@@ -170,7 +167,6 @@
                                         technology to make sure we invest as much time and effort into developing strong
                                         relationships with you, our client, because we find this develops understanding.
                                         And understanding helps us work with you, rather than for you.</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>

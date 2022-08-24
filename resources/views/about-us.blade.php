@@ -78,12 +78,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li id="aboutus" class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact Us</a></li>
                 </ul>
                 <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
 
@@ -107,7 +107,7 @@
             </div>
         </div>
     </nav>
-    <section class="projects-section bg-light" id="offers">
+    <section class="projects-section bg-light">
         <div class="container px-4 px-lg-5">
             <!-- Featured Project Row-->
             <div class="container tm-container-gallery">
@@ -134,8 +134,6 @@
                                     <p class="mb-0 text-white-50">When it comes to delivery times, we at iLux put it at
                                         the highest priority! Did you make an order in our store? You’re expected to
                                         receive the order at super-fast delivery times in order to keep you smiling.</p>
-
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
@@ -154,7 +152,6 @@
                                         insane and fit everyone! View all of the services offered on the website now,
                                         and find out just how low our prices are compared to others.
                                     </p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
                         </div>
@@ -172,7 +169,6 @@
                                         maintaining the complete discretion of all our customers. Your information is
                                         entered and stored on a secured server for the sole purpose of using the various
                                         services offered in our store.</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
