@@ -1,0 +1,38 @@
+#offer-page{
+    background: url(img/bg.jpg);
+    background-size: cover;
+}
+.card {
+    width: 300px;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    background: white;
+    display: inline-block;
+    display: flex;
+    text-align: center;
+}
+
+.card-deck {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+#pic {
+    max-width: 10vw;
+    padding-left: 5vw;
+    
+}
+
+.row-offer {
+    color: white;
+}
