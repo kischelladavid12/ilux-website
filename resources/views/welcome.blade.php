@@ -83,7 +83,7 @@
                     <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
                 <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
 
@@ -166,8 +166,7 @@
                                     <h4 class="text-white">Instagram Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="#about">Boost Now!</a>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +182,7 @@
                                     <h4 class="text-white">Facebook Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="#about">Boost Now!</a>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -199,8 +197,7 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">Twitter Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, and Retweets</p>
-                                    <a class="btn btn-primary mt-4" href="#about">Boost Now!</a>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -215,8 +212,7 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-white">Youtube Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Subscribers, Likes, Views and Comments</p>
-                                    <a class="btn btn-primary mt-4" href="#about">Boost Now!</a>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -232,8 +228,7 @@
                                     <h4 class="text-white">Tiktok Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="#about">Boost Now!</a>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -277,17 +272,16 @@
                 </div>
                 <!-- t1-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r1.jpg" alt="review1" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/reviews.png" alt="review1" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <img id="testimonial" src="img/testimonial-img-01.jpg" alt="Image"
+                                        class="img-fluid mx-auto"><br>
                                     <h4 class="text-white">Kendra Boyle</h4>
-                                    <p class="mb-0 text-white-50">"I was very skeptical about how the service will be
-                                        performed and what response will be received regarding issues so I made a
-                                        relatively small order, after the fast and professional service I received I
+                                    <p class="mb-0 text-white-50">"Fast and professional service I received I
                                         intend to return here only Highly recommended"</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
@@ -295,16 +289,17 @@
                 </div>
                 <!-- t2-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r2.jpg" alt="review2" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/r2-2.jpg" alt="review2" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <img id="testimonial" src="img/testimonial-img-02.jpg" alt="Image"
+                                        class="img-fluid mx-auto"><br>
                                     <h4 class="text-white">Damien James</h4>
-                                    <p class="mb-0 text-white-50">"​I ordered likes for some Instagram posts from you
-                                        and got the order in 2 minutes.. Tell you the truth? I didn’t expect it to be
-                                        that fast and that’s why I’m writing my recommendation"</p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                    <p class="mb-0 text-white-50">"​I ordered likes for some posts from you
+                                        and got the order. Tell you the truth? I didn’t expect it to be
+                                        that fast"</p>
                                 </div>
                             </div>
                         </div>
@@ -312,15 +307,16 @@
                 </div>
                 <!-- t3-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r3.jpg" alt="review3" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/r3-3.jpg" alt="review3" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <img id="testimonial" src="img/testimonial-img-03.jpg" alt="Image"
+                                        class="img-fluid mx-auto"><br>
                                     <h4 class="text-white">Adel Roberts</h4>
                                     <p class="mb-0 text-white-50">"​From 1,000 followers, I gained 5,000 more in such a
                                         convenient way with the help of iLux!"</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
                         </div>
@@ -328,16 +324,17 @@
                 </div>
                 <!-- t4-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r4.jpg" alt="review4" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/r4-4.jpg" alt="review4" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Karl Jones</h4>
+                                    <img id="testimonial" src="img/testimonial-img-04.jpg" alt="Image"
+                                        class="img-fluid mx-auto"><br>
+                                    <h4 class="text-white">Karla Jones</h4>
                                     <p class="mb-0 text-white-50">"Number 1 supplying followers quickly and cheap! Such
-                                        a big help with my newly opened business to gain more followers and viewers."
+                                        a big help to gain more followers and viewers."
                                     </p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
                         </div>
@@ -346,60 +343,8 @@
             </div>
     </section>
 
-    <!-- Signup-->
-    <section class="signup-section" id="signup">
-        <title>iLux-Contact-Us-Homepage</title>
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
-                        <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="emailAddress" type="email"
-                                    placeholder="Enter email address..." aria-label="Enter email address..."
-                                    data-sb-validations="required,email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton"
-                                    type="submit">Notify Me!</button></div>
-                        </div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is
-                            required.</div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3 mt-2 text-white">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <!--To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Contact-->
-    <section class="contact-section bg-black">
+    <section class="contact-section bg-black" id="contact">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-3 mb-md-0">
@@ -442,7 +387,8 @@
     </section>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">Copyright &copy; iLux 2022</div>
+        <div class="container px-4 px-lg-5">Copyright &copy; iLux 2022. All Rights Reserved. We are not affiliated with
+            Instagram, Facebook, Twitter, YouTube, Tiktok.</div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
