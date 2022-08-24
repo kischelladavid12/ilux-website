@@ -85,7 +85,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
                 </ul>
                 <a class="btn btn-primary" href="log-in.blade.php">Login</a>
             </div>
@@ -96,7 +96,7 @@
     <div id="form">
         <div class="container-login ">
 
-            <form class="form" id="login">
+            <form class="form" id="login" action="{{ route('/auth/login') }}">
                 <h1 class="form_title">Login</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">

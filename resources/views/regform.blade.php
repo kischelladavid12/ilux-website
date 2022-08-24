@@ -85,7 +85,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
                 </ul>
                 <a class="btn btn-primary" href="log-in.blade.php">Login</a>
             </div>
