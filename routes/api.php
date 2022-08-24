@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use GuzzleHttp\Client;
+use App\Http\Controllers\TurboSMMController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,20 @@ use GuzzleHttp\Client;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+//public routes
+Route::post('/auth/register', [AuthController::class, 'register']);
+Route::post('/auth/login', [AuthController::class, 'login']);
+
+
+//protected routes
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::post('services', [TurboSMMController::class, 'serviceList']);
+    Route::post('balance', [TurboSMMController::class, 'balance']);
+    Route::post('order-status/{id}', [TurboSMMController::class, 'orderStatus']);
 });
