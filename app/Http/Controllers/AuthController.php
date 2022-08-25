@@ -92,7 +92,18 @@ class AuthController extends Controller
 
     public function logout()
     {
-        auth()->user->tokens()->delete();
-        return response(['message' => 'Logged Out']);
+        try {
+            if (auth('sanctum')->user()) {
+                auth()->user->tokens()->delete();
+                return response(['message' => 'Logged Out']);
+            } else {
+                return response()->json(['message' => 'You are not logged in.']);
+            }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage(),
+            ], 500);
+        }
     }
 }
