@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use GuzzleHttp\Client;
+//use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 
 class TurboConnect
