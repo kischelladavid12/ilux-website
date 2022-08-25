@@ -4,14 +4,14 @@ namespace App\Services;
 
 use App\Services\TurboConnect;
 
-class ServiceList
+class TurboBalance
 {
-    public function services()
+    public function checkBal()
     {
         $connect_estab = new TurboConnect();
         return $connect_estab->connect($data = [
             'key' => env('API_KEY'),
-            'action' => 'services'
+            'action' => 'balance'
         ]);
     }
 }

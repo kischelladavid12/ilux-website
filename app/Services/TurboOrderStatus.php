@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Services\TurboConnect;
 
-class OrderStatus
+class TurboOrderStatus
 {
     public function orderStatus($id) //get services list
     {

@@ -6,11 +6,12 @@ use App\Services\TurboConnect;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
 
-class OrderAdd
+class TurboOrderAdd
 {
     public function addOrder($request) //get services list
     {
         try {
+
             $query = array();
 
             foreach ($request->all() as $key => $value) {
@@ -34,7 +35,7 @@ class OrderAdd
                 ], $response), 500);
             } else {
                 //For Initial Order Status Checking
-                $orderCheck = new OrderStatus();
+                $orderCheck = new TurboOrderStatus();
 
                 //Create New Record to Local Orders Database
                 $isInsertSuccess = Order::create([

@@ -3,35 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\OrderAdd;
-use App\Services\ServiceList;
-use App\Services\Balance;
-use App\Services\OrderStatus;
+use App\Services\TurboOrderAdd;
+use App\Services\TurboServiceList;
+use App\Services\TurboBalance;
+use App\Services\TurboOrderStatus;
 
 class TurboSMMController extends Controller
 {
 
     public function serviceList()
     {
-        $response = new ServiceList();
+        $response = new TurboServiceList();
         return $response->services();
     }
 
     public function balance()
     {
-        $response = new Balance();
+        $response = new TurboBalance();
         return $response->checkBal();
     }
 
     public function addOrder(Request $request,)
     {
-        $response = new OrderAdd();
+        $response = new TurboOrderAdd();
         return $response->addOrder($request);
     }
 
     public function orderStatus($id)
     {
-        $response = new OrderStatus();
+        $response = new TurboOrderStatus();
         return $response->orderStatus($id);
     }
 }
