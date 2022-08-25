@@ -18,22 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::middleware('auth:sanctum')->get('/home', function () {
+Route::get('/home', function () {
     return view('welcome');
-});
-
-Route::middleware('auth:sanctum')->get('/dashboard', function () {
-    return view('home');
-});
-
-Route::middleware('auth:sanctum')->get('/service-list', function () {
-    return view('service-list');
-});
-
-Route::middleware('auth:sanctum')->get('/order', function () {
-    return view('order-view/order-form');
 });
 
 Route::get('/what-we-do', function () {
@@ -44,6 +30,30 @@ Route::get('/about-us', function () {
     return view('about-us');
 });
 
+Route::get('/login', function () {
+    return view('log-in');
+});
+
+Route::get('/register', function () {
+    return view('regform');
+});
 
 
-Route::middleware('auth:sanctum')->post('order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
+//protected routes
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+
+    Route::get('/dashboard', function () {
+        return view('home');
+    });
+
+    Route::get('/service-list', function () {
+        return view('service-list');
+    });
+
+    Route::get('/order', function () {
+        return view('order-view/order-form');
+    });
+
+    Route::post('order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
+});
