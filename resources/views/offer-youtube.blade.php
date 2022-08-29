@@ -79,14 +79,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#what-we-do">What We Do</a></li>
-                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact-us">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
-                <a class="btn btn-primary" href="log-in.html">Login</a>
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="regform">Register</a>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
@@ -119,9 +128,6 @@
                                             most out of your Youtube account,and make sure
                                             all your subscribers are real.
                                         </p>
-                                        <h4 id="lets-boost">Let's boost your:</h4>
-                                        <a class="btn btn-primary" href="offer-youtube.html#yt-account">Youtube
-                                            Account</a><br><br>
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +163,7 @@
                             <p> ✓24/7 Live chat & Phone support</p>
                             <p> ✓ Refill in 24 hours if drops occured</p>
                             <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="order-yt-views-1k.html">Boost Now!</a>
+                            <a class="btn btn-primary" href="/order-yt-views-1k">Boost Now!</a>
                         </div>
                     </div>
                     <div class="card-plan">
@@ -170,7 +176,7 @@
                             <p> ✓ Weekly optimization reviews</p>
                             <p> ✓ Location & Gender based targeting</p>
                             <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="order-yt-subs-1k.html">Boost Now!</a>
+                            <a class="btn btn-primary" href="/order-yt-subs-1k">Boost Now!</a>
                         </div>
                     </div>
                     <div class="card-plan">
@@ -183,7 +189,7 @@
                             <p> ✓ Weekly optimization reviews</p>
                             <p> ✓ Location & Gender based targeting</p>
                             <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="order-yt-likes-1k.html">Boost Now!</a>
+                            <a class="btn btn-primary" href="/order-yt-likes-1k">Boost Now!</a>
                         </div>
                     </div>
                 </div>

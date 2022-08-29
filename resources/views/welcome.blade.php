@@ -85,10 +85,16 @@
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
                 </ul>
-                <div>
-                    <a class="btn btn-primary" href="login">Login</a>
-                    <a class="btn btn-primary" href="regform">Register</a>
-                </div>
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="regform">Register</a>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
@@ -124,7 +130,7 @@
             <a class="btn btn-primary mt-2 mb-5" href="what-we-do">Get Started</a>
         </div>
 
-        <img class="img-fluid px-lg-6 mt-3 " src="img/sm.png" alt="logo" />
+        <img class="img-fluid px-lg-6 mt-3" src="img/sm.png" alt="logo" />
     </section>
 
     <!-- Offers-->
@@ -330,7 +336,7 @@
     </section>
 
     <!-- Contact-->
-    <section class="contact-section bg-black" id="contact">
+    <section class="contact-section bg-black" id="contact-us">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-3 mb-md-0">

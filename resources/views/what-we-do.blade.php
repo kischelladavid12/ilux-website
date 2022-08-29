@@ -78,32 +78,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/#">Home</a></li>
-                    <li id="whatwedo" class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
-                <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
-
-
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
-                        @else
-                            <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
-                            @endif
-                        @endauth
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="regform">Register</a>
                     </div>
                 @endif
-
-
-
             </div>
         </div>
     </nav>

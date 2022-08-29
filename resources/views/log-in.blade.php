@@ -17,7 +17,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 
@@ -80,14 +80,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
-                <a class="btn btn-primary" href="log-in.blade.php">Login</a>
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="regform">Register</a>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
@@ -96,7 +105,7 @@
     <div id="form">
         <div class="container-login ">
 
-            <form class="form" id="login" action="{{ route('/auth/login') }}">
+            <form class="form" id="login" action="{{ url('/api/auth/login') }}">
                 <h1 class="form_title">Login</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
@@ -112,7 +121,7 @@
                     <a href="#" class="form_link">Forgot your password?</a>
                 </p>
                 <p class="form_text">
-                    <a class="form_link" href="regform.blade.php" id="linkCreateAccount">Don't have an account?
+                    <a class="form_link" href="/register" id="linkCreateAccount">Don't have an account?
                         Create account</a>
                 </p>
                 <p class="form_text">

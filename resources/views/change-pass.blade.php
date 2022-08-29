@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <title>Resistration Form</title>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Resistration Form</title>
     <link rel="stylesheet" href="login.css">
-    </head>
+</head>
 
 
 <body>
@@ -47,7 +50,7 @@
                                 <div class="chat-bar-icons">
                                     <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
                                         onclick="heartButton()"></i>
-                                    
+
                                 </div>
                             </div>
 
@@ -69,20 +72,31 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top"><img src="img/ilux2.png" id="logo">iLux</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
-                <a class="btn btn-primary" href="log-in.html">Login</a>
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="regform">Register</a>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
@@ -90,20 +104,23 @@
     <!--Register Form-->
     <div id="form">
         <div class="container-register ">
-        
+
             <form class="form " id="createAccount">
                 <h1 class="form_title">Change Password</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
-                    <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username" required>
+                    <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username"
+                        required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" id="signupPassword" class="form_input" autofocus placeholder="Password" required>
+                    <input type="password" id="signupPassword" class="form_input" autofocus placeholder="Password"
+                        required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" id="signupConPassword" class="form_input" autofocus placeholder="New password" required>
+                    <input type="password" id="signupConPassword" class="form_input" autofocus
+                        placeholder="New password" required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
@@ -115,11 +132,11 @@
                 <h1 class="form_title">Login</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Username or email" >
+                    <input type="text" class="form_input" autofocus placeholder="Username or email">
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" class="form_input" autofocus placeholder="Password" >
+                    <input type="password" class="form_input" autofocus placeholder="Password">
                     <div class="form_input-error-message"></div>
                 </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
@@ -127,7 +144,8 @@
                     <a href="#" class="form_link">Forgot your password?</a>
                 </p>
                 <p class="form_text">
-                    <a class="form_link" href="regform.html" id="linkCreateAccount">Don't have an account? Create account</a>
+                    <a class="form_link" href="regform.html" id="linkCreateAccount">Don't have an account? Create
+                        account</a>
                 </p>
                 <p class="form_text">
                     <a class="form_link" href="index.html">Back to Home</a>
