@@ -83,7 +83,7 @@
                     <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
                 <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
 

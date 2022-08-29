@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Offer</title>
+    <title>Offer-Twitter</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -92,65 +92,101 @@
     </nav>
     <!-- Offer Page -->
     <section class="projects-section bg-light" id="offer-page">
+        <title>iLux-Offers-Homepage</title>
         <div class="container px-4 px-lg-5">
             <!-- Featured Project Row-->
             <div class="container tm-container-gallery">
                 <div class="row row-offer">
                     <div class="text-center col-12">
-                        <h2 class="tm-text-primary tm-section-title mb-4">What we Offer</h2>
-                        <p class="mx-auto tm-section-desc">
-                            Here are the social medias available to grow your reach!
-                        </p>
+                        <img id="ig" src="img/twitter-logo.png" alt="twitter-logo">
+                        <h2 class="tm-text-primary tm-section-title mb-4">Facebook Growth Solution</h2>
+                        <h4 class="mb-2">With the number 1 and secured boosting platform.</h4><br>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- social medias-->
-        <div class="card-deck">
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/insta-logo.png" alt="instagram-logo"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Instagram</h5>
-                    <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
-                    <a class="btn btn-primary" href="offer-instagram">Boost Now!</a>
+                <!-- Twitter-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-4"><img class="img-fluid" src="img/twitter.png" alt="twitter" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <div class="text">
+                                        <p class="mx-auto tm-section-desc">
+                                            Are you looking to boost your personal or business social media
+                                            account? While there's no way to grow your Twitter account
+                                            overnight, our tools will help you to grow your likes and followers on
+                                            Twitter with no effort!<br><br>Let our experts help you get the
+                                            most out of your Twitter account,and make sure
+                                            all your followers are real.
+                                        </p>
+                                        <h4 id="lets-boost">Let's boost your:</h4>
+                                        <a class="btn btn-primary" href="offer-twitter.html#twt-account">Twitter
+                                            Account</a><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/facebook-logo.png" alt="facebook-logo"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Facebook</h5>
-                    <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
-                    <a class="btn btn-primary" href="offer-facebook">Boost Now!</a>
+                <!-- Twitter Account -->
+                <div class="container px-4 px-lg-5">
+                    <!-- Featured Project Row-->
+                    <div class="container tm-container-gallery">
+                        <div class="row row-offer">
+                            <div class="text-center col-12">
+                                <img id="ig" src="img/twitter-logo.png" alt="twitter-logo">
+                                <h2 class="tm-text-primary tm-section-title mb-4">Twitter Account Growth Plans</h2>
+                                <p class="mx-auto tm-section-desc">
+                                    Get Started Today, with your very own Twitter Marketer. Setup your campaign, you'll
+                                    be
+                                    receiving your first grow within hours!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/twitter-logo.png" alt="twitter-logo"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Twitter</h5>
-                    <p class="card-text">Avail more Followers, Likes, and Retweets now!</p>
-                    <a class="btn btn-primary" href="offer-twitter">Boost Now!</a>
+                <!-- social medias-->
+                <div class="card-deck">
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>FOLLOWERS</h5>
+                            <h1>₱499</h1>
+                            <h5 style="font-weight: bold;">1000 Followers</h5>
+                            <hr>
+                            <p> ✓ Organic Growth</p>
+                            <p> ✓24/7 Live chat & Phone support</p>
+                            <p> ✓ Refill in 24 hours if drops occured</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="order-twitter-follow-1k.html">Boost Now!</a>
+                        </div>
+                    </div>
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>RETWEETS</h5>
+                            <h1>₱1,199</h1>
+                            <h5 style="font-weight: bold;">1000 Retweets</h5>
+                            <hr>
+                            <p> ✓ Organic Growth</p>
+                            <p> ✓ Weekly optimization reviews</p>
+                            <p> ✓ Location & Gender based targeting</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="order-twitter-retweet-1k.html">Boost Now!</a>
+                        </div>
+                    </div>
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>LIKES</h5>
+                            <h1>₱399</h1>
+                            <h5 style="font-weight: bold;">1000 Likes</h5>
+                            <hr>
+                            <p> ✓ Faster likes growth</p>
+                            <p> ✓ Weekly optimization reviews</p>
+                            <p> ✓ Location & Gender based targeting</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="order-twitter-likes-1k.html">Boost Now!</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="card-deck">
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/youtube-logo.png" alt="youtube-logo"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Youtube</h5>
-                    <p class="card-text">Avail more Subscribers, Likes, Views and Comments now!</p>
-                    <a class="btn btn-primary" href="offer-youtube">Boost Now!</a>
-                </div>
-            </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/tiktok-logo.png" alt="tiktok-logo"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Tiktok</h5>
-                    <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
-                    <a class="btn btn-primary" href="offer-tiktok">Boost Now!</a>
-                </div>
-            </div>
-        </div>
-
     </section>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
