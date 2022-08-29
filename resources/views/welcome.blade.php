@@ -158,7 +158,8 @@
                 </div>
                 <!-- Instagram-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/instagram.png" alt="instagram" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/instagram-crop.png" alt="instagram" />
+                    </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -174,7 +175,7 @@
                 </div>
                 <!-- Facebook-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/facebook.png" alt="facebook" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/facebook-crop.png" alt="facebook" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -190,7 +191,7 @@
                 </div>
                 <!-- Twitter-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/twitter.png" alt="twitter" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/twitter-crop.png" alt="twitter" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -205,7 +206,7 @@
                 </div>
                 <!-- Youtube-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/youtube.png" alt="youtube" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/youtube-crop.png" alt="youtube" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -220,7 +221,7 @@
                 </div>
                 <!-- Tiktok-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/tiktok.png" alt="tiktok" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/tiktok-crop.png" alt="tiktok" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -272,7 +273,7 @@
                 </div>
                 <!-- t1-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/reviews.png" alt="review1" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree.jpg" alt="review1" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
