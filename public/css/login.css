@@ -1,5 +1,5 @@
 body{
-    background: url(img/bg.jpg);
+    background: linear-gradient(to bottom, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
     background-size: cover;
 }
 
