@@ -32,7 +32,7 @@ Route::get('/about-us', function () {
 
 Route::get('/login', function () {
     return view('log-in');
-});
+})->name('login');
 
 Route::get('/register', function () {
     return view('regform');
