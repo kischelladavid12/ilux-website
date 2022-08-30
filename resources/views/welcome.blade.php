@@ -307,7 +307,8 @@
                                     <img id="testimonial" src="img/testimonial-img-03.jpg" alt="Image"
                                         class="img-fluid mx-auto"><br>
                                     <h4 class="text-white">Adel Roberts</h4>
-                                    <p class="mb-0 text-white-50">"​From 1,000 followers, I gained 5,000 more in such a
+                                    <p class="mb-0 text-white-50">"​From a hundred followers, I gained a thousand more
+                                        in such a
                                         convenient way with the help of iLux!"</p>
                                 </div>
                             </div>
