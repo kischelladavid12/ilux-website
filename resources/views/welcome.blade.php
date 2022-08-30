@@ -83,27 +83,18 @@
                     <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
                 </ul>
-                <!--<a class="btn btn-primary" href="log-in.html">Login</a> -->
-
-
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
-                        @else
-                            <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
-                            @endif
-                        @endauth
+                @if (auth('sanctum')->user())
+                    <div>
+                        <a class="btn btn-primary" href="home">Account</a>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
                     </div>
                 @endif
-
-
-
             </div>
         </div>
     </nav>
@@ -139,7 +130,7 @@
             <a class="btn btn-primary mt-2 mb-5" href="what-we-do">Get Started</a>
         </div>
 
-        <img class="img-fluid px-lg-6 mt-3 " src="img/sm.png" alt="logo" />
+        <img class="img-fluid px-lg-6 mt-3" src="img/sm.png" alt="logo" />
     </section>
 
     <!-- Offers-->
@@ -167,7 +158,7 @@
                                     <h4 class="text-white">Instagram Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
+                                    <a class="btn btn-primary mt-4" href="offer">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +174,7 @@
                                     <h4 class="text-white">Facebook Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
+                                    <a class="btn btn-primary mt-4" href="offer">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +189,7 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">Twitter Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, and Retweets</p>
-                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
+                                    <a class="btn btn-primary mt-4" href="offer">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +204,7 @@
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-white">Youtube Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Subscribers, Likes, Views and Comments</p>
-                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
+                                    <a class="btn btn-primary mt-4" href="offer">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +220,7 @@
                                     <h4 class="text-white">Tiktok Boost</h4>
                                     <p class="mb-0 text-white-50">Avail more Followers, Likes, Views, and Comments now!
                                     </p>
-                                    <a class="btn btn-primary mt-4" href="offer.blade.php">Boost Now!</a>
+                                    <a class="btn btn-primary mt-4" href="offer">Boost Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +264,7 @@
                 </div>
                 <!-- t1-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/ree.jpg" alt="review1" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree1.png" alt="review1" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -290,7 +281,7 @@
                 </div>
                 <!-- t2-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r2-2.jpg" alt="review2" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree2.png" alt="review2" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -308,7 +299,7 @@
                 </div>
                 <!-- t3-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r3-3.jpg" alt="review3" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree3.png" alt="review3" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -316,7 +307,8 @@
                                     <img id="testimonial" src="img/testimonial-img-03.jpg" alt="Image"
                                         class="img-fluid mx-auto"><br>
                                     <h4 class="text-white">Adel Roberts</h4>
-                                    <p class="mb-0 text-white-50">"​From 1,000 followers, I gained 5,000 more in such a
+                                    <p class="mb-0 text-white-50">"​From a hundred followers, I gained a thousand more
+                                        in such a
                                         convenient way with the help of iLux!"</p>
                                 </div>
                             </div>
@@ -325,7 +317,7 @@
                 </div>
                 <!-- t4-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r4-4.jpg" alt="review4" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree4.png" alt="review4" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -345,7 +337,7 @@
     </section>
 
     <!-- Contact-->
-    <section class="contact-section bg-black" id="contact">
+    <section class="contact-section bg-black" id="contact-us">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-3 mb-md-0">

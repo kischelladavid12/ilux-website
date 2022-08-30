@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Offer-Youtube</title>
+    <title>Offer-Twitter</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -81,7 +81,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
@@ -99,52 +99,99 @@
             </div>
         </div>
     </nav>
-    <!-- User Account -->
+    <!-- Offer Page -->
     <section class="projects-section bg-light" id="offer-page">
+        <title>iLux-Offers-Homepage</title>
         <div class="container px-4 px-lg-5">
             <!-- Featured Project Row-->
             <div class="container tm-container-gallery">
                 <div class="row row-offer">
                     <div class="text-center col-12">
-                        <h2 class="tm-text-primary tm-section-title mb-4">@User_Account</h2>
-                        <a href="change-pass.html">
-                            <p class="mx-auto tm-section-desc">
-                                Change Password
-                        </a>
-                        </p>
+                        <img id="ig" src="img/twitter-logo.png" alt="twitter-logo">
+                        <h2 class="tm-text-primary tm-section-title mb-4">Facebook Growth Solution</h2>
+                        <h4 class="mb-2">With the number 1 and secured boosting platform.</h4><br>
                     </div>
                 </div>
-                <!-- Table-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center table">
-                    <table class="table table-sm-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Order</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2"></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Twitter-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-4"><img class="img-fluid" src="img/twitter.png" alt="twitter" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <div class="text">
+                                        <p class="mx-auto tm-section-desc">
+                                            Are you looking to boost your personal or business social media
+                                            account? While there's no way to grow your Twitter account
+                                            overnight, our tools will help you to grow your likes and followers on
+                                            Twitter with no effort!<br><br>Let our experts help you get the
+                                            most out of your Twitter account,and make sure
+                                            all your followers are real.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Twitter Account -->
+                <div class="container px-4 px-lg-5">
+                    <!-- Featured Project Row-->
+                    <div class="container tm-container-gallery">
+                        <div class="row row-offer">
+                            <div class="text-center col-12">
+                                <img id="ig" src="img/twitter-logo.png" alt="twitter-logo">
+                                <h2 class="tm-text-primary tm-section-title mb-4">Twitter Account Growth Plans</h2>
+                                <p class="mx-auto tm-section-desc">
+                                    Get Started Today, with your very own Twitter Marketer. Setup your campaign, you'll
+                                    be
+                                    receiving your first grow within hours!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- social medias-->
+                <div class="card-deck">
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>FOLLOWERS</h5>
+                            <h1>₱499</h1>
+                            <h5 style="font-weight: bold;">1000 Followers</h5>
+                            <hr>
+                            <p> ✓ Organic Growth</p>
+                            <p> ✓24/7 Live chat & Phone support</p>
+                            <p> ✓ Refill in 24 hours if drops occured</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="/order-twitter-follow-1k">Boost Now!</a>
+                        </div>
+                    </div>
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>RETWEETS</h5>
+                            <h1>₱1,199</h1>
+                            <h5 style="font-weight: bold;">1000 Retweets</h5>
+                            <hr>
+                            <p> ✓ Organic Growth</p>
+                            <p> ✓ Weekly optimization reviews</p>
+                            <p> ✓ Location & Gender based targeting</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="/order-twitter-retweet-1k">Boost Now!</a>
+                        </div>
+                    </div>
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <h5>LIKES</h5>
+                            <h1>₱399</h1>
+                            <h5 style="font-weight: bold;">1000 Likes</h5>
+                            <hr>
+                            <p> ✓ Faster likes growth</p>
+                            <p> ✓ Weekly optimization reviews</p>
+                            <p> ✓ Location & Gender based targeting</p>
+                            <p> ✓ 100% Money Back Guarantee</p>
+                            <a class="btn btn-primary" href="/order-twitter-likes-1k">Boost Now!</a>
+                        </div>
+                    </div>
                 </div>
     </section>
     <!-- Footer-->

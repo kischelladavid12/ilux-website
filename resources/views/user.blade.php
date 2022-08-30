@@ -17,7 +17,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/offer.css" rel="stylesheet" />
+    <link href="offer.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">

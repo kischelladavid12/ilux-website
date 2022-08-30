@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Offer-Youtube</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -17,10 +16,12 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/offer.css" rel="stylesheet" />
+    <title>Resistration Form</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
-<body id="page-top">
+
+<body>
     <div id="chatbot">
         <!-- CHAT BAR BLOCK -->
         <div class="chat-bar-collapsible">
@@ -99,69 +100,58 @@
             </div>
         </div>
     </nav>
-    <!-- User Account -->
-    <section class="projects-section bg-light" id="offer-page">
-        <div class="container px-4 px-lg-5">
-            <!-- Featured Project Row-->
-            <div class="container tm-container-gallery">
-                <div class="row row-offer">
-                    <div class="text-center col-12">
-                        <h2 class="tm-text-primary tm-section-title mb-4">@User_Account</h2>
-                        <a href="change-pass.html">
-                            <p class="mx-auto tm-section-desc">
-                                Change Password
-                        </a>
-                        </p>
-                    </div>
-                </div>
-                <!-- Table-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center table">
-                    <table class="table table-sm-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Order</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2"></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">Copyright &copy; iLux 2012. All Rights Reserved. We are not affiliated with
-            Instagram, Facebook, Twitter, YouTube, Tiktok.</div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
+    <!--Register Form-->
+    <div id="form">
+        <div class="container-register ">
+
+            <form class="form " id="createAccount">
+                <h1 class="form_title">Change Password</h1>
+                <div class="form_message form_message--error"></div>
+                <div class="form_input-group">
+                    <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username"
+                        required>
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input type="password" id="signupPassword" class="form_input" autofocus placeholder="Password"
+                        required>
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input type="password" id="signupConPassword" class="form_input" autofocus
+                        placeholder="New password" required>
+                    <div class="form_input-error-message"></div>
+                </div>
+                <button class="form_button mb-3" type="submit">Continue</button>
+                <p class="form_text">
+                    <a class="form_link" href="index.html">Back to Home</a>
+                </p>
+            </form>
+            <form class="form form--hidden" id="login">
+                <h1 class="form_title">Login</h1>
+                <div class="form_message form_message--error"></div>
+                <div class="form_input-group">
+                    <input type="text" class="form_input" autofocus placeholder="Username or email">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input type="password" class="form_input" autofocus placeholder="Password">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <button class="form_button mb-3" type="submit">Continue</button>
+                <p class="form_text">
+                    <a href="#" class="form_link">Forgot your password?</a>
+                </p>
+                <p class="form_text">
+                    <a class="form_link" href="regform.html" id="linkCreateAccount">Don't have an account? Create
+                        account</a>
+                </p>
+                <p class="form_text">
+                    <a class="form_link" href="index.html">Back to Home</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
 </body>
-
-</html>

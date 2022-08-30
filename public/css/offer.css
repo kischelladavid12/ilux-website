@@ -1,11 +1,43 @@
-#offer-page{
-    background: url(img/bg.jpg);
+#offer-page, #ig-follow, #ig-likes, #twt-account, #yt-account, #fb-page, #fb-profile, #tiktok-ph, #tiktok-likes, #tiktok-follow{
+    background: linear-gradient(to bottom, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
     background-size: cover;
 }
 .card {
     width: 300px;
     max-width: 300px;
     max-height: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    background: white;
+    display: inline-block;
+    display: flex;
+    text-align: center;
+}
+
+.table-card {
+    margin-left: 14rem;
+    margin-right: 14rem;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    background: white;
+    display: inline-block;
+    display: flex;
+    text-align: center;
+}
+table tr, th, td {
+    padding: 20px;
+    font-size: 20px;
+    width: auto;
+    border: 5px black;
+}
+
+.card-plan, .card-ig {
+    width: 300px;
+    max-width: 300px;
+    max-height: 600px;
     margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
@@ -28,11 +60,26 @@
 }
 
 #pic {
-    max-width: 10vw;
-    padding-left: 5vw;
-    
+    max-width: 5vw;
+
+
 }
 
 .row-offer {
     color: white;
 }
+
+/*Instagram*/
+.ig-button {
+    align-items: center;
+
+}
+
+#ig, #lets-boost {
+    margin: 2em;
+}
+
+.text {
+    color: white;
+}
+
