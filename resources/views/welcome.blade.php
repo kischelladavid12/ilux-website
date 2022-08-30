@@ -92,7 +92,7 @@
                 @else
                     <div>
                         <a class="btn btn-primary" href="login">Login</a>
-                        <a class="btn btn-primary" href="regform">Register</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
                     </div>
                 @endif
             </div>
@@ -264,7 +264,7 @@
                 </div>
                 <!-- t1-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/ree.jpg" alt="review1" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree1.png" alt="review1" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -281,7 +281,7 @@
                 </div>
                 <!-- t2-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r2-2.jpg" alt="review2" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree2.png" alt="review2" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -299,7 +299,7 @@
                 </div>
                 <!-- t3-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r3-3.jpg" alt="review3" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree3.png" alt="review3" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -316,7 +316,7 @@
                 </div>
                 <!-- t4-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-4"><img class="img-fluid" src="img/r4-4.jpg" alt="review4" /></div>
+                    <div class="col-lg-4"><img class="img-fluid" src="img/ree4.png" alt="review4" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">

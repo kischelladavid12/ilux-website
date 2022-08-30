@@ -93,7 +93,7 @@
                 @else
                     <div>
                         <a class="btn btn-primary" href="login">Login</a>
-                        <a class="btn btn-primary" href="regform">Register</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
                     </div>
                 @endif
             </div>
