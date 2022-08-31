@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/home', function () {
     return view('welcome');
@@ -31,10 +31,18 @@ Route::get('/about-us', function () {
 });
 
 Route::get('/login', function () {
+    if (auth('sanctum')->user()) {
+        return Redirect::route('home');
+    }
+
     return view('log-in');
 })->name('login');
 
 Route::get('/register', function () {
+    if (auth('sanctum')->user()) {
+        return Redirect::route('home');
+    }
+
     return view('regform');
 });
 
@@ -192,5 +200,3 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return view('order-view/order-yt-views-1k');
     });
 });
-
-
