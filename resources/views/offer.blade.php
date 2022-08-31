@@ -116,25 +116,31 @@
         </div>
         <!-- social medias-->
         <div class="card-deck">
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/insta-logo.png" alt="instagram-logo"></div>
+            <div class="card-plan">
                 <div class="card-body">
+                    <div><img id="pic" class="card-img-top" src="img/insta-logo.png"
+                            alt="instagram-logo"><br><br>
+                    </div>
                     <h5 class="card-title">Instagram</h5>
                     <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
                     <a class="btn btn-primary" href="offer-instagram">Boost Now!</a>
                 </div>
             </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/facebook-logo.png" alt="facebook-logo"></div>
+            <div class="card-plan">
                 <div class="card-body">
+                    <div><img id="pic" class="card-img-top" src="img/facebook-logo.png"
+                            alt="facebook-logo"><br><br>
+                    </div>
                     <h5 class="card-title">Facebook</h5>
                     <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
                     <a class="btn btn-primary" href="offer-facebook">Boost Now!</a>
                 </div>
             </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/twitter-logo.png" alt="twitter-logo"></div>
+            <div class="card-plan">
                 <div class="card-body">
+                    <div><img id="pic" class="card-img-top" src="img/twitter-logo.png"
+                            alt="twitter-logo"><br><br>
+                    </div>
                     <h5 class="card-title">Twitter</h5>
                     <p class="card-text">Avail more Followers, Likes, and Retweets now!</p>
                     <a class="btn btn-primary" href="offer-twitter">Boost Now!</a>
@@ -142,17 +148,21 @@
             </div>
         </div>
         <div class="card-deck">
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/youtube-logo.png" alt="youtube-logo"></div>
+            <div class="card-plan">
                 <div class="card-body">
+                    <div><img id="pic" class="card-img-top" src="img/youtube-logo.png"
+                            alt="youtube-logo"><br><br>
+                    </div>
                     <h5 class="card-title">Youtube</h5>
                     <p class="card-text">Avail more Subscribers, Likes, Views and Comments now!</p>
                     <a class="btn btn-primary" href="offer-youtube">Boost Now!</a>
                 </div>
             </div>
-            <div class="card">
-                <div><img id="pic" class="card-img-top" src="img/tiktok-logo.png" alt="tiktok-logo"></div>
+            <div class="card-plan">
                 <div class="card-body">
+                    <div><img id="pic" class="card-img-top" src="img/tiktok-logo.png"
+                            alt="tiktok-logo"><br><br>
+                    </div>
                     <h5 class="card-title">Tiktok</h5>
                     <p class="card-text">Avail more Followers, Likes, Views, and Comments now!</p>
                     <a class="btn btn-primary" href="offer-tiktok">Boost Now!</a>
