@@ -16,7 +16,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Login Form</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 

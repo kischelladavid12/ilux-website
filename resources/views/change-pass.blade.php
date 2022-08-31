@@ -16,8 +16,8 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Resistration Form</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Change Password</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 
