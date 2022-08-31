@@ -109,7 +109,11 @@
             <form class="form" id="login" action="/api/auth/login" method="POST">
                 @csrf
                 <h1 class="form_title">Login</h1>
-                <div class="form_message form_message--error"></div>
+                <div class="form_message form_message--error">
+                    @if ($errors->any())
+                        {{ $errors->first() }}
+                    @endif
+                </div>
                 <div class="form_input-group">
                     <input type="text" name="username" class="form_input" autofocus
                         placeholder="Username or email">
