@@ -20,7 +20,6 @@ use App\Http\Controllers\AuthController;
 //public routes
 Route::post('/auth/register', [AuthController::class, 'register'])->name("/auth/register");
 Route::post('/auth/login', [AuthController::class, 'login']);
-Route::post('/auth/logout', [AuthController::class, 'logout']);
 
 
 //protected routes
@@ -30,6 +29,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return $request->user();
     });
 
+    Route::get('/auth/logout', [AuthController::class, 'logout']);
 
     Route::post('/services', [TurboSMMController::class, 'serviceList']);
     Route::post('balance', [TurboSMMController::class, 'balance']);
