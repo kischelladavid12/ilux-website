@@ -105,25 +105,36 @@
     <div id="form">
         <div class="container-register ">
 
-            <form class="form " id="createAccount">
+            <form class="form " id="createAccount" action="/api/auth/register" method="POST">
+                @csrf
                 <h1 class="form_title">Create Account</h1>
+                @if ($errors->any())
+                    <div class="m-auto text-center">
+                        @foreach ($errors->all() as $error)
+                            <li class="text-danger list-none">
+                                {{ $error }}
+                            </li>
+                        @endforeach
+                    </div>
+                @endif
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
-                    <input type="text" id="signupUsername" class="form_input" autofocus placeholder="Username"
+                    <input type="text" name="username" id="signupUsername" class="form_input" autofocus
+                        placeholder="Username" required>
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input type="text" name="email" class="form_input" autofocus placeholder="Email Address"
                         required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Email Address" required>
+                    <input type="password" name="password" id="signupPassword" class="form_input" autofocus
+                        placeholder="Password" required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" id="signupPassword" class="form_input" autofocus placeholder="Password"
-                        required>
-                    <div class="form_input-error-message"></div>
-                </div>
-                <div class="form_input-group">
-                    <input type="password" id="signupConPassword" class="form_input" autofocus
+                    <input type="password" name="conPassword" id="signupConPassword" class="form_input" autofocus
                         placeholder="Confirm password" required>
                     <div class="form_input-error-message"></div>
                 </div>

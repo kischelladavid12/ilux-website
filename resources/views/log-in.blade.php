@@ -109,11 +109,11 @@
                 <h1 class="form_title">Login</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Username or email">
+                    <input type="text" name="username" class="form_input" autofocus placeholder="Username or email">
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" class="form_input" autofocus placeholder="Password">
+                    <input type="password" name="password" class="form_input" autofocus placeholder="Password">
                     <div class="form_input-error-message"></div>
                 </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
