@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".form_input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 8) {
-                setInputError(inputElement, "Username must be at least 8 characters in length");
+            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 4) {
+                setInputError(inputElement, "Username must be at least 4 characters in length");
 
             }
             if (e.target.id === "signupPassword" && e.target.value.length > 0 && e.target.value.length < 8) {

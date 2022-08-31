@@ -138,16 +138,12 @@
                         autofocus placeholder="Confirm password" required>
                     <div class="form_input-error-message"></div>
                 </div>
-                <div>
-                    <button type="button" class="modal_button btn-link" data-toggle="modal"
-                        data-target="#modalTerms">
-                        Terms and Conditions
-                    </button>
-                </div>
+                <input type="checkbox" name="terms" class="inline mb-3" required /> I accept the <a
+                    class="terms-link" data-toggle="modal" data-target="#modalTerms">terms and conditions</a>
                 <!-- Modal -->
                 <div class="modal fade" id="modalTerms" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="ModalLabel">Terms and Conditions</h5>
@@ -159,8 +155,6 @@
                                 <p>
                                     terms and conditions ni ilux<br>
                                 </p>
-                                <input type="checkbox" name="terms" class="inline mb-3" required /> I accept the
-                                terms and conditions
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
