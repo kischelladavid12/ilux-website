@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(function() {
 
-    $('[data-toggle="modal"]').hover(function() {
+    $('[data-toggle="modal"]'){
       var modalId = $(this).data('target');
       $(modalId).modal('show');
 
