@@ -106,6 +106,7 @@
         <div class="container-login ">
 
             <form class="form" id="login" action="/api/auth/login" method="POST">
+                @csrf
                 <h1 class="form_title">Login</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
