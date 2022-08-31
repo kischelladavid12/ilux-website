@@ -89,6 +89,7 @@
                 @if (auth('sanctum')->user())
                     <div>
                         <a class="btn btn-primary" href="home">Account</a>
+                        <a class="btn btn-primary" href="/dashboard">Log-out</a>
                     </div>
                 @else
                     <div>
