@@ -114,6 +114,11 @@
                         {{ $errors->first() }}
                     @endif
                 </div>
+                <div class="form_message text-success">
+                    @if (Session::has('message'))
+                        {{ Session::get('message') }}
+                    @endif
+                </div>
                 <div class="form_input-group">
                     <input type="text" name="username" class="form_input" autofocus
                         placeholder="Username or email">
