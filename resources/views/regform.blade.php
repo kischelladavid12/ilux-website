@@ -95,7 +95,7 @@
                 @else
                     <div>
                         <a class="btn btn-primary" href="login">Login</a>
-                        <a class="btn btn-primary" href="/register">Register</a>
+                        <a class="btn btn-primary" href="/api/auth/logout">Register</a>
                     </div>
                 @endif
             </div>
