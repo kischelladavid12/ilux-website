@@ -88,7 +88,7 @@
                 </ul>
                 @if (auth('sanctum')->user())
                     <div>
-                        <a class="btn btn-primary" href="home">Account</a>
+                        <a class="btn btn-primary" href="/dashboard">Account</a>
                     </div>
                 @else
                     <div>
