@@ -23,11 +23,7 @@ class AuthController extends Controller
             );
 
             if ($validateUser->fails()) {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'Registration Validation Error',
-                    'errors' => $validateUser->errors()
-                ], 401);
+                return back()->withErrors($validateUser);
             }
 
             $user = User::create([
@@ -36,11 +32,9 @@ class AuthController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
-            return response()->json([
-                'status' => true,
-                'message' => 'Registered Successfully!',
-                'token' => $user->createToken("API TOKEN")->plainTextToken
-            ], 200);
+            $user->createToken("API TOKEN")->plainTextToken;
+
+            return redirect('/home');
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => false,
@@ -55,33 +49,23 @@ class AuthController extends Controller
             $validateUser = Validator::make(
                 $request->all(),
                 [
-                    'username' => 'required',
+                    'username' => 'required|exists:users,username',
                     'password' => 'required'
                 ]
             );
 
             if ($validateUser->fails()) {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'Login Validation Error',
-                    'errors' => $validateUser->errors()
-                ], 401);
+                return redirect()->back()->withErrors($validateUser);
             }
 
             if (!Auth::attempt($request->only(['username', 'password']))) {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'Username or Password do not match'
-                ], 401);
+                return back()->with('error', 'Username or Password is already taken');
             }
 
             $user = User::where('username', $request->username)->first();
+            $user->createToken("API TOKEN")->plainTextToken;
 
-            return response()->json([
-                'status' => true,
-                'message' => 'Logged In!',
-                'token' => $user->createToken("API TOKEN")->plainTextToken
-            ], 200);
+            return redirect('/home');
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => false,
