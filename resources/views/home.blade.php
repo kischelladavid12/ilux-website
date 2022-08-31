@@ -107,7 +107,7 @@
                 <div class="row row-offer">
                     <div class="text-center col-12">
                         <h2 class="tm-text-primary tm-section-title mb-4">@User_Account</h2>
-                        <a href="change-pass.html">
+                        <a href="/change-pass">
                             <p class="mx-auto tm-section-desc">
                                 Change Password
                         </a>
