@@ -134,8 +134,8 @@
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input type="password" name="conPassword" id="signupConPassword" class="form_input" autofocus
-                        placeholder="Confirm password" required>
+                    <input type="password" name="password_confirmation" id="signupConPassword" class="form_input"
+                        autofocus placeholder="Confirm password" required>
                     <div class="form_input-error-message"></div>
                 </div>
                 <div>
