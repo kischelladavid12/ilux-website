@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
-    
+
 
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 8) {
                 setInputError(inputElement, "Username must be at least 8 characters in length");
-                
+
             }
             if (e.target.id === "signupPassword" && e.target.value.length > 0 && e.target.value.length < 8) {
                 setInputError(inputElement, "Password must be at least 8 characters in length");
-                
-            }  
-            
+
+            }
+
         });
 
         inputElement.addEventListener("input", e => {
@@ -48,3 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+//modal
+
+$(function() {
+
+    $('[data-toggle="modal"]').hover(function() {
+      var modalId = $(this).data('target');
+      $(modalId).modal('show');
+
+    });
+
+  });

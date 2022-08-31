@@ -83,8 +83,6 @@
 #logo {
   max-width: 3em;
   margin-right: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
 }
 
 
@@ -3592,8 +3590,11 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #64a19d;
+  color: var(--color-secondary);
   text-decoration: underline;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
 }
 .btn-link:hover {
   color: #50817e;
@@ -4155,8 +4156,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -11481,7 +11481,7 @@ body {
 }
 
 #mainNav {
-  min-height: 3.5rem;
+  min-height: 3rem;
   background-color: #fff;
 }
 #mainNav .navbar-toggler {
@@ -11494,7 +11494,7 @@ body {
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #fff;
+  color: black;
   font-weight: 700;
   padding: 0.9rem 0;
 }

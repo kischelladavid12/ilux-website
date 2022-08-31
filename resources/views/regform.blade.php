@@ -104,8 +104,8 @@
     <!--Register Form-->
     <div id="form">
         <div class="container-register ">
-            <form class="form " id="createAccount" action="/api/auth/register" method="POST">
-                @csrf
+
+            <form class="form " id="createAccount">
                 <h1 class="form_title">Create Account</h1>
                 <div class="form_message form_message--error"></div>
                 <div class="form_input-group">
@@ -127,11 +127,39 @@
                         placeholder="Confirm password" required>
                     <div class="form_input-error-message"></div>
                 </div>
-                <input type="checkbox" name="terms" class="inline mb-3" required /> I accept the <a
-                    href="#terms">terms and conditions</a>
+                <div>
+                    <button type="button" class="modal_button btn-link" data-toggle="modal"
+                        data-target="#modalTerms">
+                        Terms and Conditions
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalTerms" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLabel">Terms and Conditions</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    terms and conditions ni ilux<br>
+                                </p>
+                                <input type="checkbox" name="terms" class="inline mb-3" required /> I accept the
+                                terms and conditions
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
                 <p class="form_text">
-                    <a class="form_link" href="log-in.blade.php" id="linkLogin">Already have an account? Sign in</a>
+                    <a class="form_link" href="log-in.html" id="linkLogin">Already have an account? Sign in</a>
                 </p>
                 <p class="form_text">
                     <a class="form_link" href="index.html">Back to Home</a>
@@ -162,5 +190,6 @@
             </form>
         </div>
     </div>
-    <script src="login.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>

@@ -138,6 +138,18 @@ body{
     cursor: pointer;
     background: var(--color-primary);
 }
+.modal_button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: white;
+}
 
 .form_button:hover {
     background: var(--color-primary-dark);
