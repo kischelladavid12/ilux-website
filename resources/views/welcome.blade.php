@@ -88,7 +88,10 @@
                 </ul>
                 @if (auth('sanctum')->user())
                     <div>
-                        <a class="btn btn-primary" href="/dashboard">Account</a>
+                        <a class="btn btn-primary" href="/dashboard">@
+                            <?php
+                            echo auth()->user()->username;
+                            ?></a>
                         <a class="btn btn-primary" href="/api/auth/logout">Log-out</a>
                     </div>
                 @else
@@ -111,7 +114,7 @@
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Ready to grow and expand your reach? At iLux, we
                             have millions of followers ready for you!</h2>
 
-                        <a class="btn btn-primary" href="#what-we-do">Find Out More</a>
+                        <a class="btn btn-primary" href="/offer">Boost Now!</a>
                 </div>
             </div>
         </div>
