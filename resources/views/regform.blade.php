@@ -165,10 +165,10 @@
                 </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
                 <p class="form_text">
-                    <a class="form_link" href="log-in.html" id="linkLogin">Already have an account? Sign in</a>
+                    <a class="form_link" href="/login" id="linkLogin">Already have an account? Sign in</a>
                 </p>
                 <p class="form_text">
-                    <a class="form_link" href="index.html">Back to Home</a>
+                    <a class="form_link" href="/home">Back to Home</a>
                 </p>
             </form>
             <form class="form form--hidden" id="login">

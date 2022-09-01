@@ -137,7 +137,7 @@
                         Create account</a>
                 </p>
                 <p class="form_text">
-                    <a class="form_link" href="welcome.blade.php">Back to Home</a>
+                    <a class="form_link" href="/home">Back to Home</a>
                 </p>
             </form>
             <form class="form form--hidden" id="createAccount">
