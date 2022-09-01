@@ -11514,6 +11514,7 @@ body {
     border-bottom: none;
     background-color: #fff;
     transition: background-color 0.3s ease-in-out;
+    text-align: center;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
@@ -11917,3 +11918,4 @@ html {
 .footer {
   padding: 5rem 0;
 }
+
