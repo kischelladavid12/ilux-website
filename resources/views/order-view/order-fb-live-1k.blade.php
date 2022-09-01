@@ -97,7 +97,7 @@
         <div class="container-login ">
 
             <form action="{{ url('/order/form-submit') }}" method="POST" class="form" id="order">
-                <!--@csrf-->
+                @csrf
                 <!-- Please include these hidden inputs and their respective values for every respective order form -->
                 <input type="hidden" id="service" name="service" value="2211">
                 <input type="hidden" id="package" name="package_name" value="Facebook Live - 1,000 Reactions">
@@ -112,9 +112,9 @@
                     <input type="text" name="link" class="form_input" autofocus
                         placeholder="Facebook Live Stream URL">
                 </div>
-                <button class="form_button mb-3" type="submit" href="user.html">Order Now</button>
+                <button class="form_button mb-3" type="submit" href="/dashboard">Order Now</button>
                 <p class="form_text">
-                    <a class="form_link" href="offer.html">Back to Offers</a>
+                    <a class="form_link" href="/offer">Back to Offers</a>
                 </p>
             </form>
         </div>
