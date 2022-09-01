@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>Register</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -16,12 +17,11 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Register</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link href="css/offer.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
 </head>
 
-
-<body>
+<body id="page-top">
     <div id="chatbot">
         <!-- CHAT BAR BLOCK -->
         <div class="chat-bar-collapsible">
@@ -90,18 +90,17 @@
                 @if (auth('sanctum')->user())
                     <div>
                         <a class="btn btn-primary" href="/dashboard">Account</a>
-                        <a class="btn btn-primary" href="/dashboard">Log-out</a>
+                        <a class="btn btn-primary" href="/api/auth/logout">Log-out</a>
                     </div>
                 @else
                     <div>
                         <a class="btn btn-primary" href="login">Login</a>
-                        <a class="btn btn-primary" href="/api/auth/logout">Register</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
                     </div>
                 @endif
             </div>
         </div>
     </nav>
-
     <!--Register Form-->
     <div id="form">
         <div class="container-register ">
@@ -165,10 +164,10 @@
                 </div>
                 <button class="form_button mb-3" type="submit">Continue</button>
                 <p class="form_text">
-                    <a class="form_link" href="log-in.html" id="linkLogin">Already have an account? Sign in</a>
+                    <a class="form_link" href="/login" id="linkLogin">Already have an account? Sign in</a>
                 </p>
                 <p class="form_text">
-                    <a class="form_link" href="index.html">Back to Home</a>
+                    <a class="form_link" href="/home">Back to Home</a>
                 </p>
             </form>
             <form class="form form--hidden" id="login">
@@ -198,4 +197,21 @@
     </div>
     <script src="js/login.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; iLux 2012. All Rights Reserved. We are not affiliated with
+            Instagram, Facebook, Twitter, YouTube, Tiktok.</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
 </body>
+
+</html>

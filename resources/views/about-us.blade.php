@@ -17,6 +17,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/offer.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -81,7 +82,7 @@
                     <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
-                    <li id="abou-us" class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
@@ -167,6 +168,21 @@
                     </div>
                 </div>
     </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; iLux 2012. All Rights Reserved. We are not affiliated with
+            Instagram, Facebook, Twitter, YouTube, Tiktok.</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
 </body>
 
 </html>
