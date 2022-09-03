@@ -48,8 +48,7 @@ class AuthController extends Controller
             }
 
             return redirect('/login')->with([
-                'message' => 'Registered Successfully!' . PHP_EOL . 'You can now log in!',
-                'token' => $user->createToken("API TOKEN")->plainTextToken
+                'message' => 'Registered Successfully!' . PHP_EOL . 'You can now log in!'
             ]);
         } catch (\Throwable $th) {
             return response()->json([
