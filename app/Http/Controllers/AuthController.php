@@ -34,11 +34,18 @@ class AuthController extends Controller
                 'email' => $request['email'],
                 'password' => Hash::make($request->password)
             ]);
-
-            $wallet = Wallet::create([
-                'user_id' => User::where('username', $user->username)->first(),
-                'balance' => 0
-            ]);
+            try {
+                Wallet::create([
+                    'user_id' => $user->id,
+                    'balance' => 0
+                ]);
+            } catch (\Throwable $th) {
+                User::where('username', $user->username)->delete();
+                return response()->json([
+                    'status' => false,
+                    'message' => $th->getMessage(),
+                ], 500);
+            }
 
             return redirect('/login')->with([
                 'message' => 'Registered Successfully!' . PHP_EOL . 'You can now log in!',
