@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -34,6 +35,11 @@ class AuthController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
+            $wallet = Wallet::create([
+                'user_id' => User::where('username', $user->username)->first(),
+                'balance' => 0
+            ]);
+
             return redirect('/login')->with([
                 'message' => 'Registered Successfully!' . PHP_EOL . 'You can now log in!',
                 'token' => $user->createToken("API TOKEN")->plainTextToken
@@ -45,6 +51,9 @@ class AuthController extends Controller
             ], 500);
         }
     }
+
+
+
 
     public function login(Request $request)
     {
@@ -81,6 +90,9 @@ class AuthController extends Controller
             ], 500);
         }
     }
+
+
+
 
     public function logout(Request $request)
     {
