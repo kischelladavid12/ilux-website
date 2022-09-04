@@ -18,6 +18,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/offer.css">
+
 </head>
 
 <body id="page-top">
@@ -87,12 +88,18 @@
                     <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
                 </ul>
                 @if (auth('sanctum')->user())
-                    <div>
-                        <a class="btn btn-primary" href="/dashboard">@
+                    <button class="btn btn-light">$0.00</button>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php
                             echo auth()->user()->username;
-                            ?></a>
-                        <a class="btn btn-primary" href="/api/auth/logout">Log-out</a>
+                            ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/dashboard">Account</a>
+                            <a class="dropdown-item" href="/api/auth/logout">Logout</a>
+                        </div>
                     </div>
                 @else
                     <div>
@@ -390,6 +397,8 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
