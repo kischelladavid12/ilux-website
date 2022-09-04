@@ -85,7 +85,7 @@
                     <li id="offer-nav" class="nav-item"><a class="nav-link" href="/admin-wallet">Wallet List</a></li>
                     <li class="nav-item"><a class="nav-link" href="/admin-luxy">Luxy</a></li>
                 </ul>
-                <div class="input-search">
+                <div class="input-group">
                     <div class="form-outline">
                         <input type="search" id="form1" class="form-control" class="form-label" for="form1"
                             placeholder="Search" />
@@ -121,23 +121,24 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="form_input-group">
-                                            <input type="text" name="$adminKey" id="adminKey" class="form_input"
-                                                autofocus placeholder="Admin Key">
-                                        </div>
-                                        <div class="form_input-group">
-                                            <input type="text" name="$amount" class="form_input" autofocus
-                                                placeholder="Amount to be Added">
-                                        </div>
-                                        <div class="form_input-group">
-                                            <input type="text" name="$user_id" id="user_id" class="form_input"
-                                                autofocus placeholder="User ID">
-                                        </div>
+                                        <form>
+                                            <div class="form_input-group">
+                                                <input type="text" name="$adminKey" id="adminKey"
+                                                    class="form_input" autofocus placeholder="Admin Key">
+                                            </div>
+                                            <div class="form_input-group">
+                                                <input type="text" name="$amount" class="form_input" autofocus
+                                                    placeholder="Amount to be Added">
+                                            </div>
+                                            <div class="form_input-group">
+                                                <input type="text" name="$user_id" id="user_id"
+                                                    class="form_input" autofocus placeholder="User ID">
+                                            </div>
+                                            <button class="btn btn-primary mb-3" type="submit">Add</button>
+                                        </form>
+
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

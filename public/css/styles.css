@@ -2747,8 +2747,7 @@ textarea.form-control-lg {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%;
+  align-items: center;
 }
 
 .input-search {
@@ -2756,6 +2755,7 @@ textarea.form-control-lg {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
 }
 
 .input-group > .form-control,
