@@ -1,5 +1,5 @@
-#offer-page, #ig-follow, #ig-likes, #twt-account, #yt-account, #fb-page, #fb-profile, #tiktok-ph, #tiktok-likes, #tiktok-follow{
-    background: linear-gradient(to bottom, rgb(27, 27, 27) 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+#offer-page, #order-list, #luxy-page, #wallet-list, #ig-follow, #ig-likes, #twt-account, #yt-account, #fb-page, #fb-profile, #tiktok-ph, #tiktok-likes, #tiktok-follow{
+    background: url(img/bg.jpg);
     background-size: cover;
 }
 .card {
