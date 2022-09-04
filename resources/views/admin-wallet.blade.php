@@ -85,7 +85,7 @@
                     <li id="offer-nav" class="nav-item"><a class="nav-link" href="/admin-wallet">Wallet List</a></li>
                     <li class="nav-item"><a class="nav-link" href="/admin-luxy">Luxy</a></li>
                 </ul>
-                <div class="input-group">
+                <div class="input-search">
                     <div class="form-outline">
                         <input type="search" id="form1" class="form-control" class="form-label" for="form1"
                             placeholder="Search" />
