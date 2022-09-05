@@ -159,49 +159,36 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>order_id</th>
+                                            <th>local_id</th>
                                             <th>user_id</th>
+                                            <th>turbo_order_id</th>
+                                            <th>turbo_service_id</th>
+                                            <th>package_name</th>
+                                            <th>price</th>
+                                            <th>status</th>
                                             <th>created_at</th>
                                             <th>updated_at</th>
-                                            <th>status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                            <td>Incomplete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                            <td>Incomplete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                            <td>Incomplete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                            <td>Incomplete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                            <td>Incomplete</td>
-                                        </tr>
+                                        <?php
+                                        use App\Http\Controllers\AdminPanelController;
+                                        $query = new AdminPanelController();
+                                        ?>
+                                        @foreach ($query->displayOrders() as $record)
+                                            <tr>
+                                                <td>{{ $record->local_id }}</td>
+                                                <td>{{ $record->user_id }}</td>
+                                                <td>{{ $record->turbo_order_id }}</td>
+                                                <td>{{ $record->turbo_service_id }}</td>
+                                                <td>{{ $record->package_name }}</td>
+                                                <td>{{ $record->price }}</td>
+                                                <td>{{ $record->status }}</td>
+                                                <td>{{ $record->created_at }}</td>
+                                                <td>{{ $record->updated_at }}</td>
+
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

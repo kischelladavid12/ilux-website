@@ -203,41 +203,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>0.00</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>0.00</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>0.00</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>0.00</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>0.00</td>
-                                            <td>2022-09-04</td>
-                                            <td>2022-09-04</td>
-                                        </tr>
+                                        <?php
+                                        use App\Http\Controllers\AdminPanelController;
+                                        $query = new AdminPanelController();
+                                        ?>
+                                        @foreach ($query->displayWallets() as $record)
+                                            <tr>
+                                                <td>{{ $record->wallet_id }}</td>
+                                                <td>{{ $record->user_id }}</td>
+                                                <td>{{ $record->balance }}</td>
+                                                <td>{{ $record->created_at }}</td>
+                                                <td>{{ $record->updated_at }}</td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
