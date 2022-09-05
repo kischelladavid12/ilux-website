@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>Order</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -16,12 +17,10 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Order Form</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link href="css/offer.css" rel="stylesheet" />
 </head>
 
-
-<body>
+<body id="page-top">
     <div id="chatbot">
         <!-- CHAT BAR BLOCK -->
         <div class="chat-bar-collapsible">
@@ -80,18 +79,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#signup">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
-                <a class="btn btn-primary" href="log-in.html">Login</a>
+                @if (auth('sanctum')->user())
+                    <button class="btn btn-light">$0.00</button>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php
+                            echo auth()->user()->username;
+                            ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/dashboard">Account</a>
+                            <a class="dropdown-item" href="/api/auth/logout">Logout</a>
+                        </div>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
-
     <!--Order Form IG-->
     <div id="form">
         <div class="container-login ">

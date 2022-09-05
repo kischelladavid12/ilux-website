@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Order Form</title>
+    <title>Order</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -18,7 +18,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/offer.css" rel="stylesheet" />
-    <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -82,15 +81,24 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
+                    <li id="offer-nav" class="nav-item"><a class="nav-link" href="/#offers">Offers</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about-us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#contact-us">Contact Us</a></li>
                 </ul>
                 @if (auth('sanctum')->user())
-                    <div>
-                        <a class="btn btn-primary" href="/dashboard">Account</a>
-                        <a class="btn btn-primary" href="/api/auth/logout">Log-out</a>
+                    <button class="btn btn-light">$0.00</button>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php
+                            echo auth()->user()->username;
+                            ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/dashboard">Account</a>
+                            <a class="dropdown-item" href="/api/auth/logout">Logout</a>
+                        </div>
                     </div>
                 @else
                     <div>
