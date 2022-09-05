@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>User List</title>
 
     <!-- Custom fonts for this template-->
     <link href={{ URL::asset('vendor/fontawesome-free/css/all.min.css') }} rel="stylesheet" type="text/css">
@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href={{ URL::asset('css/sb-admin-2.min.css') }} rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -37,6 +38,15 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href={{ url('/admin') }}>
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Admin</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -46,7 +56,7 @@
             <!-- Nav Item - Order List -->
             <li class="nav-item">
                 <a class="nav-link" href={{ url('/admin/orders') }}>
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-chart-area"></i>
                     <span>Order List</span></a>
             </li>
 
@@ -55,20 +65,6 @@
                 <a class="nav-link" href={{ url('/admin/wallets') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Wallet List</span></a>
-            </li>
-
-            <!-- Nav Item - Service List -->
-            <li class="nav-item">
-                <a class="nav-link" href={{ url('/') }}>
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Service List</span></a>
-            </li>
-
-            <!-- Nav Item - User List -->
-            <li class="nav-item">
-                <a class="nav-link" href={{ url('/admin/users') }}>
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>User List</span></a>
             </li>
 
             <!-- Nav Item - Luxxy -->
@@ -150,36 +146,80 @@
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Service List</h1>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>username</th>
+                                            <th>email</th>
+                                            <th>created_at</th>
+                                            <th>updated_at</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        use App\Http\Controllers\AdminPanelController;
+                                        $query = new AdminPanelController();
+                                        ?>
+                                        @foreach ($query->displayServices() as $record)
+                                            <tr>
+                                                <td>{{ $record->id }}</td>
+                                                <td>{{ $record->username }}</td>
+                                                <td>{{ $record->email }}</td>
+                                                <td>{{ $record->created_at }}</td>
+                                                <td>{{ $record->updated_at }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
 
-        <!-- Bootstrap core JavaScript-->
-        <script src={{ URL::asset('vendor/jquery/jquery.min.js') }}></script>
-        <script src={{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src={{ URL::asset('vendor/jquery/jquery.min.js') }}></script>
+    <script src={{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src={{ URL::asset('vendor/jquery-easing/jquery.easing.min.js') }}></script>
+    <!-- Core plugin JavaScript-->
+    <script src={{ URL::asset('vendor/jquery-easing/jquery.easing.min.js') }}></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src={{ URL::asset('js/sb-admin-2.min.js') }}></script>
+    <!-- Custom scripts for all pages-->
+    <script src={{ URL::asset('js/sb-admin-2.min.js') }}></script>
 
-        <!-- Page level plugins -->
-        <script src={{ URL::asset('vendor/datatables/jquery.dataTables.min.js') }}></script>
-        <script src={{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.js') }}></script>
+    <!-- Page level plugins -->
+    <script src={{ URL::asset('vendor/datatables/jquery.dataTables.min.js') }}></script>
+    <script src={{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.js') }}></script>
 
-        <!-- Page level custom scripts -->
-        <script src={{ URL::asset('js/demo/datatables-demo.js') }}></script>
+    <!-- Page level custom scripts -->
+    <script src={{ URL::asset('js/demo/datatables-demo.js') }}></script>
 
 </body>
 
