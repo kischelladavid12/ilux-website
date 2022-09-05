@@ -101,11 +101,11 @@
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="adminKey"
-                                        name="$adminKey" placeholder="Admin Key">
+                                        name="adminKey" placeholder="Admin Key">
                                     <input type="text" class="form-control form-control-user" id="user_id"
-                                        name="$user_id" placeholder="User ID">
-                                    <input type="number" class="form-control form-control-user"
-                                        id="amount"name="$amount" placeholder="Amount to be Added">
+                                        name="user_id" placeholder="User ID">
+                                    <input type="number" class="form-control form-control-user" id="amount"
+                                        name="amount" placeholder="Amount to be Added">
                                 </div>
                                 <div>
                                     <input type="submit" class="btn btn-primary">Save changes</button>
