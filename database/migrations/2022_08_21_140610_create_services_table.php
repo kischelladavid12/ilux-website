@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('service_name');
+            $table->string('service_name')->unique();
             $table->bigInteger('turbo_service_id');
             $table->float('price');
             $table->timestamps();
