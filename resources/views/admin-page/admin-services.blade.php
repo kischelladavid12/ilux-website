@@ -98,6 +98,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="service_name"
                                         placeholder="Service Name">
@@ -139,6 +140,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
@@ -178,6 +180,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
@@ -185,7 +188,7 @@
                                         placeholder="New Price">
                                 </div>
                                 <div>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <input type="submit" class="btn btn-primary">Save changes</button>
                                 </div>
                             </form>
                         </div>

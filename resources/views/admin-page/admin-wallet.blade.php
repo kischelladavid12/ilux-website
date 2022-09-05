@@ -98,6 +98,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="{{ url('/api/admin/add-bal') }}" method="POST" class="wallet">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="adminKey"
                                         name="$adminKey" placeholder="Admin Key">
@@ -107,13 +108,12 @@
                                         id="amount"name="$amount" placeholder="Amount to be Added">
                                 </div>
                                 <div>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <input type="submit" class="btn btn-primary">Save changes</button>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
                         </div>
                     </div>
                 </div>
