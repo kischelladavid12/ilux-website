@@ -16,8 +16,10 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/offer.css" rel="stylesheet" />
+    <link href={{ URL::asset('css/styles.css') }} rel="stylesheet" />
+    <link href={{ URL::asset('css/offer.css') }} rel="stylesheet" />
+    <link href={{ URL::asset('css/login.css') }} rel="stylesheet" />
+
 </head>
 
 <body id="page-top">
@@ -65,8 +67,8 @@
 
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="ilux.js"></script>
+    <script src={{ URL::asset('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js') }}></script>
+    <script src={{ URL::asset('js/ilux.js') }}></script>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
@@ -158,9 +160,9 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src={{ URL::asset('https://cdn.startbootstrap.com/sb-forms-latest.js') }}></script>
+    <script src={{ URL::asset('js/bootstrap.bundle.min.js') }}></script>
+    <script src={{ URL::asset('js/login.js') }}></script>
 
 </body>
 

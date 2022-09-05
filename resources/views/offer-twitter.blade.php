@@ -138,6 +138,7 @@
                                             most out of your Twitter account,and make sure
                                             all your followers are real.
                                         </p>
+                                        <a class="btn btn-primary" href="/order-twitter">Boost Now!</a>
                                     </div>
                                 </div>
                             </div>
