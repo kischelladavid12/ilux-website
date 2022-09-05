@@ -74,20 +74,20 @@ Route::get('/change-pass', function () {
     return view('change-pass');
 });
 
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('admin-page/admin', function () {
+    return view('admin-page/admin');
 });
 
-Route::get('/admin-order', function () {
-    return view('admin-order');
+Route::get('admin-page/admin-order', function () {
+    return view('admin-page/admin-order');
 });
 
-Route::get('/admin-wallet', function () {
-    return view('admin-wallet');
+Route::get('admin-page/admin-wallet', function () {
+    return view('admin-page/admin-wallet');
 });
 
-Route::get('/admin-luxy', function () {
-    return view('admin-luxy');
+Route::get('admin-page/admin-luxy', function () {
+    return view('admin-page/admin-luxy');
 });
 
 

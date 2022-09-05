@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Order List</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href={{ URL::asset('vendor/fontawesome-free/css/all.min.css') }} rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href={{ URL::asset('css/sb-admin-2.min.css') }} rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin-page/admin">
                 <div class="sidebar-brand-text mx-3">iLux</div>
             </a>
 
@@ -40,7 +40,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/admin">
+                <a class="nav-link" href="/admin-page/admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Admin</span></a>
             </li>
@@ -55,21 +55,21 @@
 
             <!-- Nav Item - Order List -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-order">
+                <a class="nav-link" href="/admin-page/admin-order">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Order List</span></a>
             </li>
 
             <!-- Nav Item - Wallet List -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-wallet">
+                <a class="nav-link" href="/admin-page/admin-wallet">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Wallet List</span></a>
             </li>
 
             <!-- Nav Item - Luxxy -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-luxy">
+                <a class="nav-link" href="/admin-page/admin-luxy">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Luxy</span></a>
             </li>
@@ -146,36 +146,102 @@
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Order List</h1>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>order_id</th>
+                                            <th>user_id</th>
+                                            <th>created_at</th>
+                                            <th>updated_at</th>
+                                            <th>status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2022-09-04</td>
+                                            <td>2022-09-04</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2022-09-04</td>
+                                            <td>2022-09-04</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>2022-09-04</td>
+                                            <td>2022-09-04</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2022-09-04</td>
+                                            <td>2022-09-04</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>2022-09-04</td>
+                                            <td>2022-09-04</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src={{ URL::asset('vendor/jquery/jquery.min.js') }}></script>
+    <script src={{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src={{ URL::asset('vendor/jquery-easing/jquery.easing.min.js') }}></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src={{ URL::asset('js/sb-admin-2.min.js') }}></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level plugins -->
+    <script src={{ URL::asset('vendor/datatables/jquery.dataTables.min.js') }}></script>
+    <script src={{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.js') }}></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src={{ URL::asset('js/demo/datatables-demo.js') }}></script>
 
 </body>
 
