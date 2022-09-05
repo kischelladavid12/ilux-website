@@ -1,11 +1,13 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Access\Gate;
 use App\Http\Controllers\TurboSMMController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\AdminPanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +52,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('deduct-bal', [WalletController::class, 'deduct']);
         Route::post('turbo-services', [TurboSMMController::class, 'serviceList']);
         Route::post('turbo-balance', [TurboSMMController::class, 'balance']);
+
+        Route::post('create-service', [AdminPanelController::class, 'createService']);
+        Route::post('update-turbo-service-id', [AdminPanelController::class, 'updateTServID']);
+        Route::post('update-service-price', [AdminPanelController::class, 'updatePrice']);
     });
 });
