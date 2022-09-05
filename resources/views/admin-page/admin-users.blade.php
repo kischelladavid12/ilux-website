@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User List</title>
+    <title>Admin-Users</title>
 
     <!-- Custom fonts for this template-->
     <link href={{ URL::asset('vendor/fontawesome-free/css/all.min.css') }} rel="stylesheet" type="text/css">
@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href={{ URL::asset('css/sb-admin-2.min.css') }} rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -38,15 +37,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href={{ url('/admin') }}>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Admin</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -56,7 +46,7 @@
             <!-- Nav Item - Order List -->
             <li class="nav-item">
                 <a class="nav-link" href={{ url('/admin/orders') }}>
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-table"></i>
                     <span>Order List</span></a>
             </li>
 
@@ -65,6 +55,20 @@
                 <a class="nav-link" href={{ url('/admin/wallets') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Wallet List</span></a>
+            </li>
+
+            <!-- Nav Item - Service List -->
+            <li class="nav-item">
+                <a class="nav-link" href={{ url('/admin/services') }}>
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Service List</span></a>
+            </li>
+
+            <!-- Nav Item - User List -->
+            <li class="nav-item">
+                <a class="nav-link" href={{ url('/admin/users') }}>
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>User List</span></a>
             </li>
 
             <!-- Nav Item - Luxxy -->
@@ -150,7 +154,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Service List</h1>
+                    <h1 class="h3 mb-2 text-gray-800">User List</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
