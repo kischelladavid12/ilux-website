@@ -74,25 +74,6 @@ Route::get('/change-pass', function () {
     return view('change-pass');
 });
 
-Route::get('admin-page/admin', function () {
-    return view('admin-page/admin');
-});
-
-Route::get('admin-page/admin-order', function () {
-    return view('admin-page/admin-order');
-});
-
-Route::get('admin-page/admin-wallet', function () {
-    return view('admin-page/admin-wallet');
-});
-
-Route::get('admin-page/admin-luxy', function () {
-    return view('admin-page/admin-luxy');
-});
-
-
-
-
 
 //protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -214,5 +195,31 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/order-yt-views-1k', function () {
         return view('order-view/order-yt-views-1k');
+    });
+});
+
+Route::group([
+    'middleware' => ['is_admin', 'auth:sanctum'],
+    'prefix' => 'admin'
+], function () {
+
+    Route::get('luxxy', function () {
+        return view('admin-luxy');
+    });
+
+    Route::get('dashboard', function () {
+        return view('admin-page/admin');
+    });
+
+    Route::get('orders', function () {
+        return view('admin-page/admin-order');
+    });
+
+    Route::get('wallets', function () {
+        return view('admin-page/admin-wallet');
+    });
+
+    Route::get('luxxy', function () {
+        return view('admin-page/admin-luxy');
     });
 });
