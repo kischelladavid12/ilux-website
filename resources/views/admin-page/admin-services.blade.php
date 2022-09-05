@@ -106,11 +106,13 @@
                                     <input type="text" class="form-control form-control-user" name="price"
                                         placeholder="Price">
                                 </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
@@ -143,11 +145,13 @@
                                     <input type="text" class="form-control form-control-user"
                                         name="turbo_service_id" placeholder="Turbo Service ID">
                                 </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
@@ -180,11 +184,13 @@
                                     <input type="text" class="form-control form-control-user" name="price"
                                         placeholder="New Price">
                                 </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
