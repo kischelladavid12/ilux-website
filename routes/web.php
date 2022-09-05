@@ -229,7 +229,7 @@ Route::group([
     });
 
     Route::get('users', function () {
-        return view('admin-page/admin-user');
+        return view('admin-page/admin-users');
     });
 
 });

@@ -59,7 +59,7 @@
 
             <!-- Nav Item - Service List -->
             <li class="nav-item">
-                <a class="nav-link" href={{ url('/') }}>
+                <a class="nav-link" href={{ url('/admin/services') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Service List</span></a>
             </li>
