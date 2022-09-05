@@ -97,7 +97,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form class="user">
+                            <form action="{{ url('/admin/add-bal') }}" method="POST" class="wallet">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="adminKey"
                                         name="$adminKey" placeholder="Admin Key">
