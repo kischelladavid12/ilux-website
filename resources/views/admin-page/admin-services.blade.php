@@ -97,7 +97,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                            <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="service_name"
                                         placeholder="Service Name">
@@ -138,7 +138,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                            <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
@@ -177,7 +177,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                            <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
