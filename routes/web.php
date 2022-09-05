@@ -223,4 +223,13 @@ Route::group([
     Route::get('luxy', function () {
         return view('admin-page/admin-luxy');
     });
+
+    Route::get('services', function () {
+        return view('admin-page/admin-services');
+    });
+
+    Route::get('users', function () {
+        return view('admin-page/admin-user');
+    });
+
 });
