@@ -171,7 +171,7 @@
                                         use App\Http\Controllers\AdminPanelController;
                                         $query = new AdminPanelController();
                                         ?>
-                                        @foreach ($query->displayServices() as $record)
+                                        @foreach ($query->displayUsers() as $record)
                                             <tr>
                                                 <td>{{ $record->id }}</td>
                                                 <td>{{ $record->username }}</td>
