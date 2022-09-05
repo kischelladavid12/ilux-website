@@ -81,6 +81,119 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#CreateService">
+                Create Service
+            </button><br>
+
+            <!-- Modal -->
+            <div class="modal fade" id="CreateService" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Create Service</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" name="service_name"
+                                        placeholder="Service Name">
+                                    <input type="text" class="form-control form-control-user" name="turbo_service_id"
+                                        placeholder="Turbo Service ID ">
+                                    <input type="text" class="form-control form-control-user" name="price"
+                                        placeholder="Price">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#UpdateServiceID">
+                Update Turbo Service ID
+            </button><br>
+
+            <!-- Modal -->
+            <div class="modal fade" id="UpdateServiceID" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Update Turbo Service ID</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" name="id"
+                                        placeholder="Service ID">
+                                    <input type="text" class="form-control form-control-user"
+                                        name="turbo_service_id" placeholder="Turbo Service ID">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#UpdatePrice">
+                Update Price
+            </button><br>
+
+            <!-- Modal -->
+            <div class="modal fade" id="UpdatePrice" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Update Price</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ url('/admin/create-service') }}" method="POST" class="service">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" name="id"
+                                        placeholder="Service ID">
+                                    <input type="text" class="form-control form-control-user" name="price"
+                                        placeholder="New Price">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
