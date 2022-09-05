@@ -198,6 +198,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 });
 
+//admin routes
 Route::group([
     'middleware' => ['is_admin', 'auth:sanctum'],
     'prefix' => 'admin'
@@ -207,7 +208,7 @@ Route::group([
         return view('admin-luxy');
     });
 
-    Route::get('dashboard', function () {
+    Route::get('/', function () {
         return view('admin-page/admin');
     });
 
@@ -219,7 +220,7 @@ Route::group([
         return view('admin-page/admin-wallet');
     });
 
-    Route::get('luxxy', function () {
+    Route::get('luxy', function () {
         return view('admin-page/admin-luxy');
     });
 });

@@ -30,7 +30,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin-page/admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href={{ url('/admin') }}>
                 <div class="sidebar-brand-text mx-3">iLux</div>
             </a>
 
@@ -39,7 +39,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/admin-page/admin">
+                <a class="nav-link" href={{ url('/admin') }}>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Admin</span></a>
             </li>
@@ -54,21 +54,21 @@
 
             <!-- Nav Item - Order List -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-page/admin-order">
+                <a class="nav-link" href={{ url('/admin/orders') }}>
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Order List</span></a>
             </li>
 
             <!-- Nav Item - Wallet List -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-page/admin-wallet">
+                <a class="nav-link" href={{ url('/admin/wallets') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Wallet List</span></a>
             </li>
 
             <!-- Nav Item - Luxxy -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin-page/admin-luxy">
+                <a class="nav-link" href={{ url('/admin/luxy') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Luxy</span></a>
             </li>
