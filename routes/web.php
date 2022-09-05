@@ -196,6 +196,26 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/order-yt-views-1k', function () {
         return view('order-view/order-yt-views-1k');
     });
+
+    Route::get('/order-ig', function () {
+        return view('order-view/order-ig');
+    });
+
+    Route::get('/order-facebook', function () {
+        return view('order-view/order-facebook');
+    });
+
+    Route::get('/order-twitter', function () {
+        return view('order-view/order-twitter');
+    });
+
+    Route::get('/order-youtube', function () {
+        return view('order-view/order-youtube');
+    });
+
+    Route::get('/order-tiktok', function () {
+        return view('order-view/order-tiktok');
+    });
 });
 
 //admin routes
