@@ -134,7 +134,7 @@
                     </select>
                 </div>
                 <div class="form_input-group">
-                    <input type="text" name="url" class="form_input" autofocus placeholder="URL Account">
+                    <input type="text" name="link" class="form_input" autofocus placeholder="URL Account">
 
                 </div>
                 <div class="form_input-group">
