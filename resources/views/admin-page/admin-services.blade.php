@@ -139,7 +139,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
+                            <form action="{{ url('/api/admin/update-turbo-service-id') }}" method="POST"
+                                class="service">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
@@ -179,7 +180,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ url('/api/admin/create-service') }}" method="POST" class="service">
+                            <form action="{{ url('/api/admin/update-service-price') }}" method="POST"
+                                class="service">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
