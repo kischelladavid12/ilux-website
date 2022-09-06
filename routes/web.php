@@ -91,8 +91,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return view('order-view/order-form');
     });
 
-    Route::post('order/form-submit', [App\Http\Controllers\TurboSMMController::class, 'addOrder']);
-
     Route::get('/order-fb-event-1k', function () {
         return view('order-view/order-fb-event-1k');
     });
@@ -251,5 +249,4 @@ Route::group([
     Route::get('users', function () {
         return view('admin-page/admin-users');
     });
-
 });
