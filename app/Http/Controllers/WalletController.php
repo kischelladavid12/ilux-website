@@ -13,7 +13,7 @@ class WalletController extends Controller
     public static function showBalance()
     {
         $bal = Wallet::where('user_id', Auth::user()->id)->value('balance');
-        return $bal;
+        return number_format($bal, 2, '.', ',');
     }
 
     public function add(Request $request)
