@@ -14,6 +14,15 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
+FROM node:16.16.0-alpine as node
+
+WORKDIR /var/www
+COPY . .
+
+RUN npm install --global cross-env
+RUN npm install
+RUN npm run build
+
 CMD sh /app/docker/startup.sh
 
 # RUN apt-get update -y
