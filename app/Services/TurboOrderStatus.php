@@ -6,7 +6,7 @@ use App\Services\TurboConnect;
 
 class TurboOrderStatus
 {
-    public function orderStatus($id) //get services list
+    public function orderStatus($id)
     {
         $response = new TurboConnect();
         return $response->connect($data = [
