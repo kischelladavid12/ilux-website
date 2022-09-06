@@ -102,8 +102,12 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="service_name"
                                         placeholder="Service Name">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="turbo_service_id"
                                         placeholder="Turbo Service ID ">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="price"
                                         placeholder="Price">
                                 </div>
@@ -145,6 +149,8 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" class="form-control form-control-user"
                                         name="turbo_service_id" placeholder="Turbo Service ID">
                                 </div>
@@ -186,11 +192,13 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="id"
                                         placeholder="Service ID">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="price"
                                         placeholder="New Price">
                                 </div>
                                 <div>
-                                    <input type="submit" class="btn btn-primary">Save changes</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
                                 </div>
                             </form>
                         </div>
