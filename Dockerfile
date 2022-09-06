@@ -1,30 +1,46 @@
 FROM php:8.1 as php
 
-RUN apt-get update -y
-RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
-RUN docker-php-ext-install pdo pdo_mysql bcmath
+RUN apk add --no-cache nginx wget
+RUN mkdir -p /run/nginx
 
-RUN pecl install -o -f redis \
-    && rm -rf /tmp/pear \
-    && docker-php-ext-enable redis
+COPY docker/nginx.conf /etc/nginx/nginx.conf
 
-WORKDIR /var/www
-COPY . .
+RUN mkdir -p /app
+COPY . /app
 
-COPY --from=composer:2.4.0 /usr/bin/composer /usr/bin/composer
+RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar && mv composer.phar /usr/local/bin/composer"
+RUN cd /app && \
+    /usr/local/bin/composer install --no-dev
 
-ENV PORT=8000
-ENTRYPOINT [ "docker/entrypoint.sh" ]
+RUN chown -R www-data: /app
 
-# ====================================================================
-# node
+CMD sh /app/docker/startup.sh
 
-FROM node:16.16.0-alpine as node
+# RUN apt-get update -y
+# RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
+# RUN docker-php-ext-install pdo pdo_mysql bcmath
 
-WORKDIR /var/www
-COPY . .
+# RUN pecl install -o -f redis \
+#     && rm -rf /tmp/pear \
+#     && docker-php-ext-enable redis
 
-RUN npm install --global cross-env
-RUN npm install
+# WORKDIR /var/www
+# COPY . .
 
-VOLUME /var/www/node_modules
+# COPY --from=composer:2.4.0 /usr/bin/composer /usr/bin/composer
+
+# ENV PORT=8000
+# ENTRYPOINT [ "docker/entrypoint.sh" ]
+
+# # ====================================================================
+# # node
+
+# FROM node:16.16.0-alpine as node
+
+# WORKDIR /var/www
+# COPY . .
+
+# RUN npm install --global cross-env
+# RUN npm install
+
+# VOLUME /var/www/node_modules
