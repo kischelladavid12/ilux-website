@@ -46,7 +46,7 @@ class WalletController extends Controller
 
             $wallet->increment('balance', $request->amount);
 
-            return response()->json([
+            return back()->with([
                 'status' => true,
                 'message' => "Successfully added P" . $request->amount . " to " . User::where('id', $request->user_id)->value('username'),
                 'balance' => $wallet->value('balance')
