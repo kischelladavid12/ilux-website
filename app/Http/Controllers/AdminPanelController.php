@@ -78,7 +78,7 @@ class AdminPanelController extends Controller
                 'price' => $request->price
             ]);
 
-            return response()->json([
+            return back()->with([
                 'status' => true,
                 'message' => 'Service Creation Success!'
             ]);
@@ -95,7 +95,7 @@ class AdminPanelController extends Controller
         try {
             Service::where('id', $request->id)->update(array('turbo_service_id' => $request->turbo_service_id));
 
-            return response()->json([
+            return back()->with([
                 'status' => true,
                 'message' => 'Turbo Service ID Updated!'
             ]);
@@ -112,7 +112,7 @@ class AdminPanelController extends Controller
         try {
             Service::where('id', $request->id)->update(array('price' => $request->price));
 
-            return response()->json([
+            return back()->with([
                 'status' => true,
                 'message' => 'Price Updated!'
             ]);
