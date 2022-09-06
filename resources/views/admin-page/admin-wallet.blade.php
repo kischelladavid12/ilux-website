@@ -101,7 +101,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="adminKey"
-                                        name="adminKey" placeholder="Admin Key">
+                                        name="adminKey" placeholder="Admin Key" autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="user_id"
