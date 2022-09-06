@@ -163,15 +163,15 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>local_id</th>
-                                            <th>user_id</th>
-                                            <th>turbo_order_id</th>
-                                            <th>turbo_service_id</th>
-                                            <th>package_name</th>
-                                            <th>price</th>
-                                            <th>status</th>
-                                            <th>created_at</th>
-                                            <th>updated_at</th>
+                                            <th>Local ID</th>
+                                            <th>User ID</th>
+                                            <th>Turbo Order ID</th>
+                                            <th>Turbo Service ID</th>
+                                            <th>Package Name</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                            <th>Created at</th>
+                                            <th>Updated at</th>
                                         </tr>
                                     </thead>
                                     <tbody>

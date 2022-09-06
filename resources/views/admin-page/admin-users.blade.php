@@ -163,11 +163,11 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>id</th>
-                                            <th>username</th>
-                                            <th>email</th>
-                                            <th>created_at</th>
-                                            <th>updated_at</th>
+                                            <th>ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Created at</th>
+                                            <th>Updated at</th>
                                         </tr>
                                     </thead>
                                     <tbody>

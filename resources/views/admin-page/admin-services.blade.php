@@ -325,12 +325,12 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>id</th>
-                                            <th>service_name</th>
-                                            <th>turbo_service_id</th>
-                                            <th>price</th>
-                                            <th>created_at</th>
-                                            <th>updated_at</th>
+                                            <th>ID</th>
+                                            <th>Service Name</th>
+                                            <th>Turbo Service ID</th>
+                                            <th>Price</th>
+                                            <th>Created at</th>
+                                            <th>Updated at</th>
                                         </tr>
                                     </thead>
                                     <tbody>
