@@ -78,61 +78,6 @@
                     <span>Luxy</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-                Add Amount
-            </button><br>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Add Amount</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form_message form_message--error">
-                                @if (Session::get('status') == false)
-                                    {{ Session::get('message') }}
-                                @endif
-                            </div>
-                            <div class="form_message text-success">
-                                @if (Session::get('status') == true)
-                                    {{ Session::get('message') }}
-                                @endif
-                            </div>
-                            <form action="{{ url('/api/admin/add-bal') }}" method="POST" class="wallet">
-                                @csrf
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="adminKey"
-                                        name="adminKey" placeholder="Admin Key" autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="user_id"
-                                        name="user_id" placeholder="User ID">
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" id="amount"
-                                        name="amount" placeholder="Amount to be Added">
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -241,15 +186,14 @@
                                                 <td>{{ $record->balance }}</td>
                                                 <td>{{ $record->created_at }}</td>
                                                 <td>{{ $record->updated_at }}</td>
-                                                <td><button type="button" class="btn btn-secondary"
-                                                        data-toggle="modal" data-target="#addAmount">
+                                                <td><button type="button" class="btn btn-secondary" data-toggle="modal"
+                                                        data-target="#addAmount">
                                                         Add Amount
                                                     </button><br>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="addAmount" tabindex="-1"
-                                                        role="dialog" aria-labelledby="exampleModalCenterTitle"
-                                                        aria-hidden="true">
+                                                    <div class="modal fade" id="addAmount" tabindex="-1" role="dialog"
+                                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered"
                                                             role="document">
                                                             <div class="modal-content">
@@ -286,6 +230,7 @@
                                                                         <input type="hidden"
                                                                             class="form-control form-control-user"
                                                                             id="user_id" name="user_id"
+                                                                            value="{{ $record->user_id }}"
                                                                             placeholder="User ID">
 
                                                                         <div class="form-group">
