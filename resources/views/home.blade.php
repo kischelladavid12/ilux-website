@@ -125,7 +125,55 @@
                             <p class="mx-auto tm-section-desc">
                                 Change Password
                         </a>
+                        </p><br>
+
+                        <p class="mx-auto tm-section-desc">
+                            Cant't find your order in the offers? Since you are special for us, we can make it for you!
                         </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#customOrder">
+                            Custom Order
+                        </button><br>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="customOrder" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Custom Order</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="POST" class="custom_order">
+                                            @csrf
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user"
+                                                    id="social_media" name="social_media" placeholder="Social Media">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user"
+                                                    id="custom_order" name="custom_order" placeholder="Custom Order">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user"
+                                                    id="link" name="link" placeholder="URL Account">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-control form-control-user"
+                                                    id="quantity" name="quantity" placeholder="Quantity">
+                                            </div>
+                                            <div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Table-->
