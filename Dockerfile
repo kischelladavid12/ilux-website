@@ -3,7 +3,7 @@ FROM php:8.1-fpm-alpine
 RUN apk add --no-cache nginx wget
 RUN mkdir -p /run/nginx
 
-COPY docker/nginx.conf /etc/nginx/nginx.conf
+COPY Docker/nginx.conf /etc/nginx/nginx.conf
 
 RUN mkdir -p /app
 COPY . /app
