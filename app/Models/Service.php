@@ -18,4 +18,9 @@ class Service extends Model
         'turbo_service_id',
         'price'
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
