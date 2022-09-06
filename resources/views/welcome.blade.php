@@ -87,8 +87,16 @@
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
                 </ul>
+                <?php
+                use App\Http\Controllers\WalletController;
+                ?>
                 @if (auth('sanctum')->user())
-                    <button class="btn btn-light">$0.00</button>
+                    <button class="btn btn-light">
+                        ₱<?php
+                        $bal = new WalletController();
+                        echo $bal->showBalance();
+                        ?>
+                    </button>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
