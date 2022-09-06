@@ -8,6 +8,7 @@ use App\Http\Controllers\TurboSMMController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\AdminPanelController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         });
         Route::post('balance', [WalletController::class, 'showBalance']);
         Route::post('order-status/{id}', [TurboSMMController::class, 'orderStatus']);
+        Route::post('new-order', [OrderController::class, 'process']);
     });
 
 
