@@ -31,18 +31,12 @@ Route::get('/auth/logout', [AuthController::class, 'logout']);
 //protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
     //user routes
-    Route::group([
-        'prefix' => 'user',
-        'as' => 'user.'
-    ], function () {
-        Route::get('/user', function (Request $request) {
-            return $request->user();
-        });
-        Route::post('balance', [WalletController::class, 'showBalance']);
-        Route::post('order-status/{id}', [TurboSMMController::class, 'orderStatus']);
-        Route::post('new-order', [OrderController::class, 'process']);
+    Route::get('/user', function (Request $request) {
+        return $request->user();
     });
-
+    Route::post('balance', [WalletController::class, 'showBalance']);
+    Route::post('order-status/{id}', [TurboSMMController::class, 'orderStatus']);
+    Route::post('new-order', [OrderController::class, 'process']);
 
     //admin routes
     Route::group([
