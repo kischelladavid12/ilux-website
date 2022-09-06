@@ -125,6 +125,16 @@
             <div class="container tm-container-gallery">
                 <div class="row row-offer">
                     <div class="text-center col-12">
+                        <div class="form_message text-danger">
+                            @if (Session::get('status') == false)
+                                {{ Session::get('message') }}
+                            @endif
+                        </div>
+                        <div class="form_message text-success">
+                            @if (Session::get('status') == true)
+                                {{ Session::get('message') }}
+                            @endif
+                        </div>
                         <h2 class="tm-text-primary tm-section-title mb-4">@
                             <?php
                             echo auth()->user()->username;
@@ -185,28 +195,31 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Table-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center table">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Order</th>
-                                <th>Service</th>
+                                <th>Service Name</th>
                                 <th>Price</th>
                                 <th>Status</th>
+                                <th>Created At</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            use App\Http\Controllers\AdminPanelController;
-                            $query = new AdminPanelController();
+                            use App\Http\Controllers\OrderController;
+                            $query = new OrderController();
                             ?>
-                            @foreach ($query->displayWallets() as $record)
+                            @foreach ($query->showUserOrders() as $record)
                                 <tr>
-                                    <td>{{ $record->wallet_id }}</td>
-                                    <td>{{ $record->user_id }}</td>
-                                    <td>{{ $record->balance }}</td>
-                                    <td>{{ $record->user_id }}</td>
+                                    <td>{{ $record->local_id }}</td>
+                                    <td>{{ $record->service_name }}</td>
+                                    <td>{{ $record->price }}</td>
+                                    <td>{{ $record->status }}</td>
+                                    <td>{{ $record->created_at }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
