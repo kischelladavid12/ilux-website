@@ -187,33 +187,28 @@
                 </div>
                 <!-- Table-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center table">
-                    <table class="table table-sm-dark">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Order</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Status</th>
+                                <th>Order</th>
+                                <th>Service</th>
+                                <th>Price</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2"></td>
-                                <td></td>
-                            </tr>
+                            <?php
+                            use App\Http\Controllers\AdminPanelController;
+                            $query = new AdminPanelController();
+                            ?>
+                            @foreach ($query->displayWallets() as $record)
+                                <tr>
+                                    <td>{{ $record->wallet_id }}</td>
+                                    <td>{{ $record->user_id }}</td>
+                                    <td>{{ $record->balance }}</td>
+                                    <td>{{ $record->user_id }}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
