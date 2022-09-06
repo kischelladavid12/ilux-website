@@ -59,17 +59,17 @@ class WalletController extends Controller
         }
     }
 
-    public function deduct(Request $request)
+    public function deduct($user_id, $orderTotal)
     {
         try {
-            if (!User::where('id', $request->user_id)->exists()) {
+            if (!User::where('id', $user_id)->exists()) {
                 return response()->json([
                     'status' => false,
                     'message' => 'User does not exist'
                 ]);
             }
 
-            $wallet = Wallet::where('user_id', $request->user_id);
+            $wallet = Wallet::where('user_id', $user_id);
 
             if (!$wallet) {
                 return response()->json([
@@ -78,11 +78,11 @@ class WalletController extends Controller
                 ]);
             }
 
-            $wallet->decrement('balance', $request->amount);
+            $wallet->decrement('balance', $orderTotal);
 
             return response()->json([
                 'status' => true,
-                'message' => "Successfully deducted P" . $request->amount . " to " . User::where('id', $request->user_id)->value('username'),
+                'message' => "Successfully deducted P" . $orderTotal . " to " . User::where('id', $user_id)->value('username'),
                 'balance' => $wallet->value('balance')
             ]);
         } catch (\Throwable $th) {

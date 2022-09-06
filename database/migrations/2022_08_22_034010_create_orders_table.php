@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('local_id');
             $table->unsignedBigInteger('user_id');
-            $table->bigInteger('turbo_order_id');
+            $table->bigInteger('turbo_order_id')->nullable()->change();
             $table->bigInteger('turbo_service_id');
             $table->string('service_name');
             $table->float('price');
-            $table->string('status');
+            $table->string('status')->nullable()->change();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('service_name')->references('service_name')->on('services');

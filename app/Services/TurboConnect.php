@@ -12,7 +12,7 @@ class TurboConnect
         //$client = new Client(['base_uri' => env('API_LINK')]);
         try {
             $url = env('API_LINK') . '?' . http_build_query($data);
-            // echo $url;
+            // return $url;
             $response = Http::post($url);
             return json_decode($response, true);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
