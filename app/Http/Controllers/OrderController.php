@@ -25,10 +25,6 @@ class OrderController extends Controller
                 ]);
             }
 
-
-            $wallet = new WalletController();
-            $wallet->deduct(Auth::user()->id, $orderTotal);
-
             $query = array();
 
             foreach ($request->all() as $key => $value) {
@@ -65,6 +61,10 @@ class OrderController extends Controller
                     'status' => $orderCheck->orderStatus($newOrder->order)->status
                 ]);
                 if ($isInsertSuccess) {
+
+                    $wallet = new WalletController();
+                    $wallet->deduct(Auth::user()->id, $orderTotal);
+
                     return redirect('/dashboard')->with([
                         'status' => true,
                         'message' => 'Order Success!'
