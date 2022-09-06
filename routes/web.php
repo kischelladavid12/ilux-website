@@ -214,6 +214,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/order-tiktok', function () {
         return view('order-view/order-tiktok');
     });
+
+    Route::get('/add-fund', function () {
+        return view('add-fund');
+    });
 });
 
 //admin routes
