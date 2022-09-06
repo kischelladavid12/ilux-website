@@ -145,65 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Twitter Account -->
-                <div class="container px-4 px-lg-5">
-                    <!-- Featured Project Row-->
-                    <div class="container tm-container-gallery">
-                        <div class="row row-offer">
-                            <div class="text-center col-12">
-                                <img id="ig" src="img/twitter-logo.png" alt="twitter-logo">
-                                <h2 class="tm-text-primary tm-section-title mb-4">Twitter Account Growth Plans</h2>
-                                <p class="mx-auto tm-section-desc">
-                                    Get Started Today, with your very own Twitter Marketer. Setup your campaign, you'll
-                                    be
-                                    receiving your first grow within hours!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- social medias-->
-                <div class="card-deck">
-                    <div class="card-plan">
-                        <div class="card-body">
-                            <h5>FOLLOWERS</h5>
-                            <h1>₱499</h1>
-                            <h5 style="font-weight: bold;">1000 Followers</h5>
-                            <hr>
-                            <p> ✓ Organic Growth</p>
-                            <p> ✓24/7 Live chat & Phone support</p>
-                            <p> ✓ Refill in 24 hours if drops occured</p>
-                            <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="/order-twitter-follow-1k">Boost Now!</a>
-                        </div>
-                    </div>
-                    <div class="card-plan">
-                        <div class="card-body">
-                            <h5>RETWEETS</h5>
-                            <h1>₱1,199</h1>
-                            <h5 style="font-weight: bold;">1000 Retweets</h5>
-                            <hr>
-                            <p> ✓ Organic Growth</p>
-                            <p> ✓ Weekly optimization reviews</p>
-                            <p> ✓ Location & Gender based targeting</p>
-                            <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="/order-twitter-retweet-1k">Boost Now!</a>
-                        </div>
-                    </div>
-                    <div class="card-plan">
-                        <div class="card-body">
-                            <h5>LIKES</h5>
-                            <h1>₱399</h1>
-                            <h5 style="font-weight: bold;">1000 Likes</h5>
-                            <hr>
-                            <p> ✓ Faster likes growth</p>
-                            <p> ✓ Weekly optimization reviews</p>
-                            <p> ✓ Location & Gender based targeting</p>
-                            <p> ✓ 100% Money Back Guarantee</p>
-                            <a class="btn btn-primary" href="/order-twitter-likes-1k">Boost Now!</a>
-                        </div>
-                    </div>
-                </div>
+
     </section>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
