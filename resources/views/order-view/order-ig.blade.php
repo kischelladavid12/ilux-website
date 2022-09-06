@@ -115,7 +115,7 @@
     <div id="form">
         <div class="container-login ">
 
-            <form action="{{ url('/order/form-submit') }}" method="POST" class="form" id="order">
+            <form action="{{ url('/api/new-order') }}" method="POST" class="form" id="order">
                 @csrf
 
                 <h5 class="form_title">Order Process Form</h5>
