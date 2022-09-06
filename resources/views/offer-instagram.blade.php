@@ -138,7 +138,7 @@
                                             most out of your Instagram account,and make sure
                                             all your followers are real.
                                         </p>
-                                        <a class="btn btn-primary" href="/order-instagram">Boost Now!</a>
+                                        <a class="btn btn-primary" href="/order-ig">Boost Now!</a>
                                     </div>
                                 </div>
                             </div>
