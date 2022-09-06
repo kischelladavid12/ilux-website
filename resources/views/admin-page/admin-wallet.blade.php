@@ -97,6 +97,16 @@
                             </button>
                         </div>
                         <div class="modal-body">
+                            <div class="form_message form_message--error">
+                                @if (Session::get('status') == false)
+                                    {{ Session::get('message') }}
+                                @endif
+                            </div>
+                            <div class="form_message text-success">
+                                @if (Session::get('status') == true)
+                                    {{ Session::get('message') }}
+                                @endif
+                            </div>
                             <form action="{{ url('/api/admin/add-bal') }}" method="POST" class="wallet">
                                 @csrf
                                 <div class="form-group">
