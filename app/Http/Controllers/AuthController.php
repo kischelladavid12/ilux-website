@@ -113,7 +113,7 @@ class AuthController extends Controller
                 ]);
                 // return dd($user->currentAccessToken();
             } else {
-                return response()->json(['message' => 'You are not logged in.']);
+                return back()->with(['message' => 'You are not logged in.']);
             }
         } catch (\Throwable $th) {
             return response()->json([
