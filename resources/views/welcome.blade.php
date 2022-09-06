@@ -102,24 +102,25 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="/add-fund">Add Fund</a>
                         </div>
+                    </div>
 
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php
-                                echo auth()->user()->username;
-                                ?>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="/dashboard">Account</a>
-                                <a class="dropdown-item" href="/api/auth/logout">Logout</a>
-                            </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php
+                            echo auth()->user()->username;
+                            ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/dashboard">Account</a>
+                            <a class="dropdown-item" href="/api/auth/logout">Logout</a>
                         </div>
-                    @else
-                        <div>
-                            <a class="btn btn-primary" href="login">Login</a>
-                            <a class="btn btn-primary" href="/register">Register</a>
-                        </div>
+                    </div>
+                @else
+                    <div>
+                        <a class="btn btn-primary" href="login">Login</a>
+                        <a class="btn btn-primary" href="/register">Register</a>
+                    </div>
                 @endif
             </div>
         </div>

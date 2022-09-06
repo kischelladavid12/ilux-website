@@ -92,11 +92,18 @@
                 use App\Http\Controllers\WalletController;
                 ?>
                 @if (auth('sanctum')->user())
-                    <button class="btn btn-light">
-                        ₱<?php
-                        $bal = new WalletController();
-                        echo $bal->showBalance();
-                        ?>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ₱<?php
+                            $bal = new WalletController();
+                            echo $bal->showBalance();
+                            ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/add-fund">Add Fund</a>
+                        </div>
+                    </div>
                     </button>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
