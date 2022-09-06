@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Wallet;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 
 class WalletController extends Controller
 {
-    public function showBalance()
+    public static function showBalance()
     {
-        return response()->json([
-            'balance' => Wallet::where('user_id', Auth::user()->id)->value('balance')
-        ]);
+        $bal = Wallet::where('user_id', Auth::user()->id)->value('balance');
+        return $bal;
     }
 
     public function add(Request $request)
@@ -22,7 +21,7 @@ class WalletController extends Controller
         // $this->authorize('update', Wallet::where('user_id', $user_id));
 
         try {
-            if ($request->adminKey != env('ADMIN_KEY', 'No key')) {
+            if ($request->adminKey != env('ADMIN_KEY')) {
                 return response()->json([
                     'status' => false,
                     'message' => 'Invalid key'
