@@ -2,6 +2,8 @@ FROM php:8.1-fpm-alpine
 
 RUN apk add --no-cache nginx wget
 
+RUN apk update && apk add nodejs npm
+
 RUN mkdir -p /run/nginx
 
 COPY ./Docker/nginx.conf /etc/nginx/nginx.conf
@@ -13,9 +15,14 @@ RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar 
 RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
+WORKDIR /app
+RUN npm install
+RUN npm run build
+
+WORKDIR /
 RUN chown -R www-data: /app
 
-CMD sh /app/Docker/startup.sh
+CMD /app/Docker/startup.sh
 #================================================================================================================
 # RUN apt-get update -y
 # RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
