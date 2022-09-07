@@ -22,7 +22,7 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
-CMD /app/Docker/startup.sh
+CMD sh /app/Docker/startup.sh
 #================================================================================================================
 # RUN apt-get update -y
 # RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
