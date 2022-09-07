@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Order</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/logo.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -139,7 +139,7 @@
                 @endif
             </div>
 
-            <form action="{{ url('/order/form-submit') }}" method="POST" class="form" id="order">
+            <form action="{{ url('/api/new-order') }}" method="POST" class="form" id="order">
                 @csrf
 
                 <h5 class="form_title">Order Process Form</h5>

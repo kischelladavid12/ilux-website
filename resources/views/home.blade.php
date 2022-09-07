@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/logo.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -155,46 +155,75 @@
                         <p class="mx-auto tm-section-desc">
                             Cant't find your order in the offers? Since you are special for us, we can make it for you!
                         </p>
+                        <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#customOrder">
-                            Custom Order
-                        </button><br>
+                            data-target="#ordercustomModal"> Boost Now! </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="customOrder" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
+                        <!-- Custom Modal -->
+                        <div class="modal fade" id="ordercustomModal" tabindex="-1"
+                            aria-labelledby="orderfacebookModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Custom Order</h5>
+                                        <h5 class="modal-title" id="facebookModalLabel">FACEBOOK</h5>
                                         <button type="button" class="close" data-dismiss="modal"
                                             aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="" method="POST" class="custom_order">
-                                            @csrf
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user"
-                                                    id="social_media" name="social_media" placeholder="Social Media">
+                                        <!--Order Form FB-->
+                                        <div id="order-form">
+                                            <div class="container-login ">
+                                                <div class="form_message form_message--error">
+                                                    @if (Session::get('status') == false)
+                                                        {{ Session::get('message') }}
+                                                    @endif
+                                                </div>
+                                                <div class="form_message text-success">
+                                                    @if (Session::get('status') == true)
+                                                        {{ Session::get('message') }}
+                                                    @endif
+                                                </div>
+
+                                                <form action="{{ url('/order/form-submit') }}" method="POST"
+                                                    class="form" id="order">
+                                                    @csrf
+
+                                                    <h5 class="form_title">Order Process Form</h5>
+                                                    <h3 class="form_title">Facebook</h3>
+                                                    <div class="form_message form_message--error">
+                                                    </div>
+                                                    <div class="form_input-group">
+                                                        <input type="text" name="link" class="form_input"
+                                                            autofocus placeholder="URL Account">
+                                                    </div>
+                                                    <div class="form_input-group">
+                                                        <input type="text" name="social_media" class="form_input"
+                                                            autofocus placeholder="Social Media">
+                                                    </div>
+                                                    <div class="form_input-group">
+                                                        <input type="text" name="custom_order" class="form_input"
+                                                            autofocus placeholder="Custom Order">
+                                                    </div>
+                                                    <div class="form_input-group">
+                                                        <input type="number" name="quantity" class="form_input"
+                                                            min="100" max="100000" step="100" autofocus
+                                                            placeholder="Quantity">
+                                                    </div>
+                                                    <div class="form_input-group">
+                                                        <label type="number" name="price"
+                                                            class="form_input">Price</label>
+                                                    </div>
+                                                    <button class="form_button mb-3" type="submit"
+                                                        href="/dashboard">Order Now</button>
+                                                    <p class="form_text">
+                                                        <a class="form_link" href="/offer">Back to
+                                                            Offers</a>
+                                                    </p>
+                                                </form>
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user"
-                                                    id="custom_order" name="custom_order" placeholder="Custom Order">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user"
-                                                    id="link" name="link" placeholder="URL Account">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="number" class="form-control form-control-user"
-                                                    id="quantity" name="quantity" placeholder="Quantity">
-                                            </div>
-                                            <div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
