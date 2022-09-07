@@ -18,6 +18,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/offer.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -152,7 +153,92 @@
                                             most out of your Youtube account,and make sure
                                             all your subscribers are real.
                                         </p>
-                                        <a class="btn btn-primary" href="/order-youtube">Boost Now!</a>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#orderfacebookModal"> Boost Now! </button>
+
+                                        <!-- Facebook Modal -->
+                                        <div class="modal fade" id="orderfacebookModal" tabindex="-1"
+                                            aria-labelledby="orderfacebookModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="facebookModalLabel">YOUTUBE</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <!--Order Form FB-->
+                                                        <div id="order-form">
+                                                            <div class="container-login ">
+                                                                <div class="form_message form_message--error">
+                                                                    @if (Session::get('status') == false)
+                                                                        {{ Session::get('message') }}
+                                                                    @endif
+                                                                </div>
+                                                                <div class="form_message text-success">
+                                                                    @if (Session::get('status') == true)
+                                                                        {{ Session::get('message') }}
+                                                                    @endif
+                                                                </div>
+
+                                                                <form action="{{ url('/api/new-order') }}"
+                                                                    method="POST" class="form" id="order">
+                                                                    @csrf
+
+                                                                    <h5 class="form_title">Order Process Form</h5>
+                                                                    <h3 class="form_title">Youtube</h3>
+                                                                    <div class="form_message form_message--error">
+                                                                    </div>
+                                                                    <div class="form_input-group">
+                                                                        <select class="form_input" name="service_name"
+                                                                            autofocus placeholder="Services">
+                                                                            <option id="offer-youtube"
+                                                                                name="service_name"
+                                                                                value="youtube_views">Views</option>
+                                                                            <option id="offer-youtube"
+                                                                                name="service_name"
+                                                                                value="youtube_likes">Likes</option>
+                                                                            <option id="offer-youtube"
+                                                                                name="service_name"
+                                                                                value="youtube_subs">Subscribers
+                                                                            </option>
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form_input-group">
+                                                                        <input type="text" name="link"
+                                                                            class="form_input" autofocus
+                                                                            placeholder="URL Account">
+
+                                                                    </div>
+                                                                    <div class="form_input-group">
+                                                                        <input type="number" name="quantity"
+                                                                            class="form_input" min="100"
+                                                                            max="50000" step="100" autofocus
+                                                                            placeholder="Quantity">
+
+                                                                    </div>
+                                                                    <div class="form_input-group">
+                                                                        <label type="number" name="price"
+                                                                            class="form_input">Price</label>
+
+                                                                    </div>
+                                                                    <button class="form_button mb-3" type="submit"
+                                                                        href="/dashboard">Order Now</button>
+                                                                    <p class="form_text">
+                                                                        <a class="form_link" href="/offer">Back to
+                                                                            Offers</a>
+                                                                    </p>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +263,9 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

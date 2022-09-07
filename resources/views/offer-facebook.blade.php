@@ -185,7 +185,7 @@
                                                                     @endif
                                                                 </div>
 
-                                                                <form action="{{ url('/order/form-submit') }}"
+                                                                <form action="{{ url('/api/new-order') }}"
                                                                     method="POST" class="form" id="order">
                                                                     @csrf
 
