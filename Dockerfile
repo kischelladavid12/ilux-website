@@ -1,9 +1,10 @@
 FROM php:8.1-fpm-alpine
 
 RUN apk add --no-cache nginx wget
+
 RUN mkdir -p /run/nginx
 
-COPY Docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./Docker/nginx.conf /etc/nginx/nginx.conf
 
 RUN mkdir -p /app
 COPY . /app
@@ -14,17 +15,9 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
-FROM node:16.16.0-alpine as node
+CMD sh /docker/startup.sh
 
-WORKDIR /var/www
-COPY . .
-
-RUN npm install --global cross-env
-RUN npm install
-RUN npm run build
-
-CMD sh /app/docker/startup.sh
-
+#================================================================================================================
 # RUN apt-get update -y
 # RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
 # RUN docker-php-ext-install pdo pdo_mysql bcmath
