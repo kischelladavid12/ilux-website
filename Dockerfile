@@ -1,7 +1,6 @@
 FROM php:8.1-fpm-alpine
 
-RUN apt-get update -y
-RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
+RUN apk add --update --no-cache libgd libpng-dev libjpeg-turbo-dev freetype-dev
 RUN docker-php-ext-install pdo pdo_mysql bcmath
 
 RUN pecl install -o -f redis \
