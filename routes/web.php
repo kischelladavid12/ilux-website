@@ -50,26 +50,6 @@ Route::get('/offer', function () {
     return view('offer');
 });
 
-Route::get('/offer-instagram', function () {
-    return view('offer-instagram');
-});
-
-Route::get('/offer-facebook', function () {
-    return view('offer-facebook');
-});
-
-Route::get('/offer-twitter', function () {
-    return view('offer-twitter');
-});
-
-Route::get('/offer-youtube', function () {
-    return view('offer-youtube');
-});
-
-Route::get('/offer-tiktok', function () {
-    return view('offer-tiktok');
-});
-
 Route::get('/change-pass', function () {
     return view('change-pass');
 });
@@ -218,6 +198,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/add-fund', function () {
         return view('add-fund');
     });
+
+
 });
 
 //admin routes

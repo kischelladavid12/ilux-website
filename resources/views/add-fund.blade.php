@@ -151,11 +151,9 @@
                 <div class="form_input-group">
                     <label class="form_input">+639990000000</label>
                 </div>
-                <div class="form_input-group">
-                    <label>Submit receipt</label>
-                    <input type="file" class="form-control-file">
+                <div>
+                    Please send the copy of your receipt to our chat support, Luxy, to process your payment. Thank you!
                 </div>
-                <button class="form_button mb-3" type="submit" href="/">Confirm</button>
             </form>
         </div>
     </div>
