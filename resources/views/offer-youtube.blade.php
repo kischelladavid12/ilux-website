@@ -19,6 +19,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/offer.css" rel="stylesheet" />
     <link href="css/login.css" rel="stylesheet" />
+    <link href="css/modal.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
